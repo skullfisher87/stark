@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on My site EN</title>
+    <link>http://localhost:1313/en/blog/</link>
+    <description>Recent content in Blog on My site EN</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 29 Apr 2024 18:34:11 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Third Post</title>
+      <link>http://localhost:1313/en/blog/post/my-third-post/</link>
+      <pubDate>Mon, 29 Apr 2024 18:34:11 -0300</pubDate>
+      <guid>http://localhost:1313/en/blog/post/my-third-post/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>My Second Post</title>
+      <link>http://localhost:1313/en/blog/post/my-second-post/</link>
+      <pubDate>Mon, 29 Apr 2024 18:31:42 -0300</pubDate>
+      <guid>http://localhost:1313/en/blog/post/my-second-post/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>My Firts Post</title>
+      <link>http://localhost:1313/en/blog/post/my-first-post/</link>
+      <pubDate>Mon, 29 Apr 2024 18:30:32 -0300</pubDate>
+      <guid>http://localhost:1313/en/blog/post/my-first-post/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
