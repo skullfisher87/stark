@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://skullfisher87.github.io/stark/'
 languageCode = 'es'
 title = 'Stark'
 theme = 'ananke'
@@ -11,7 +11,7 @@ enableRobotsTXT = true
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = true
+  #    unsafe = true
 
 [languages]
   [languages.es]
