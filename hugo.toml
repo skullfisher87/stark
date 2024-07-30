@@ -18,7 +18,7 @@ enableRobotsTXT = true
 
 [languages]
   [languages.es]
-   title = 'Stark Tecnologia'
+   title = 'Stark Tecnología'
    weight = 1
    contentDir = 'content/es'
    
@@ -37,6 +37,7 @@ enableRobotsTXT = true
   site_footer_logo = "STARK-blanco.png"
   body_classes = "Roboto"
   background_footer_color_class = "grey-stark"
+  
  
 [[params.ananke_socials]]
   name = "linkedin"
@@ -50,7 +51,4 @@ enableRobotsTXT = true
 [[params.ananke_socials]]
   name = "youtube"
     url = "#"
-
-
-
 

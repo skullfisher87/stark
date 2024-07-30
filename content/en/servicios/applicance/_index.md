@@ -13,6 +13,6 @@ img1 = "./../../servicios/applicance/imagenes/Frame.png"
 +++
 
 
-{{< services h1_text="Database Appliance" >}}
+{{< services h1_text="Database Appliance" contact_url="en/contact">}}
 We advise our clients in identifying and migrating workloads to the cloud, obtaining the benefits of elasticity and rapid deployment of productive or development and testing work environments.
 {{< /services >}}

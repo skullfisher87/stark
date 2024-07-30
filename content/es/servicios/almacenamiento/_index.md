@@ -9,6 +9,6 @@ img1 = "./imagenes/Frame.png"
 
 +++
 
-{{< services h1_text="Almacenamiento" >}}
+{{< services h1_text="Almacenamiento" contact_url="contacto">}}
 Adoptar las nuevas tecnologías de Software Defined Storage brindan los beneficios de la nube pública en entornos de nube privados o híbridos, te invitamos a conocerlos.
 {{< /services >}}

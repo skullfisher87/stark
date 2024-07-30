@@ -1,8 +1,8 @@
 <nav class="" role="navigation">
-  <div class="pv4-l ph5-l pv0-m ph3-m bg-white flex justify-between items-center center">
+  <div class="pv4-l ph5-l pv0 ph3 bg-white flex justify-between items-center center">
     <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-black no-underline black-70 dib">
       {{ with .Site.Params.site_logo }}
-        <img src="{{ relURL . }}" class="w100 mw12-l mw4-m" alt="{{ $.Site.Title }}" />
+        <img src="{{ relURL . }}" class="w100 mw12-l mw4" alt="{{ $.Site.Title }}" />
       {{ else }}
         {{ .Site.Title }}
       {{ end }}
@@ -16,19 +16,19 @@
       </button>
     </div>
     <!-- Menú de escritorio visible en dispositivos grandes -->
-    <div class="flex-l items-center dn db-l">
+    <div class="flex-l items-center dn-m db-l">
       {{ if .Site.Menus.main }}
         <ul class="{{ cond (eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }} ">
           {{ range .Site.Menus.main }}
             <li class="list f5 f4-ns fw4 dib relative {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl5" "pl3" }}">
               {{ if .HasChildren }}
                 <span  class="pointer hover-black-80 no-underline color-grey" title="{{ i18n "pageTitle" . }}">
-                   <div class="flex">
+                   <span class="flex">
                     {{ .Name }}
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 4 20 15" fill="currentColor" class="w2 relative">
                 <path fill-rule="evenodd" d="M10 14a1 1 0 01-.707-.293l-3-3a1 1 0 111.414-1.414L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3A1 1 0 0110 14z" clip-rule="evenodd" />
               </svg>
-                   </div>
+            </span>
               
                 </span>
                 <ul class="dn absolute list pa0 mt1 bg-white bl br bb b--black-05 z-1">
@@ -49,21 +49,21 @@
     </div>
   </div>
   <!-- Menú hamburguesa oculto por defecto en dispositivos grandes -->
-  <div id="mobile-menu" class="dn bg-white dn-l center borderb-grey-1 fixed w-100 ph4">
+  <div id="mobile-menu" class=" bg-white dn-l center borderb-grey-1 fixed w-100 ph4">
     <ul class="list pa0 ma0 ">
       {{ range .Site.Menus.main }}
         <li class="pa3 bordert-grey-1 {{ if eq .Page.Params.identifier "contacto" }} flex fl w-100{{ end }}">
           {{ if .HasChildren }}
                 <span  class="pointer hover-black-80 no-underline color-grey" title="{{ i18n "pageTitle" . }}">
-                   <div class="flex">
+                   <span class="flex">
                     {{ .Name }}
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 4 20 15" fill="currentColor" class="w1 relative">
                 <path fill-rule="evenodd" d="M10 14a1 1 0 01-.707-.293l-3-3a1 1 0 111.414-1.414L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3A1 1 0 0110 14z" clip-rule="evenodd" />
               </svg>
-                   </div>
+            </span>
               
                 </span>
-                <ul class="dn relative list pa0 mt1 bg-white bl br bb b--black-05">
+                <ul class="dnrelative list pa0 mt1 bg-white bl br bb b--black-05">
                   {{ range .Children }}
                     <li class="pv2 ph3 bt b--black-05 dim"><a class="fs-dropwdown hover-black-80 no-underline color-grey " href="{{ .URL }}" >{{ .Name }}</a></li>
                   {{ end }}
@@ -75,7 +75,7 @@
           {{ end }}
         </li>
       {{ end }}
-      <div class="absolute right-3 ">{{ partial "i18nlist.html" . }}</div>
+      <span class="absolute right-3 ">{{ partial "i18nlist.html" . }}</span>
     </ul>
   </div>
 </nav>
@@ -84,45 +84,59 @@
   document.addEventListener('DOMContentLoaded', function() {
     var menuToggle = document.getElementById('menu-toggle');
     var mobileMenu = document.getElementById('mobile-menu');
-
+  
     menuToggle.addEventListener('click', function() {
-      mobileMenu.classList.toggle('dn');
+      mobileMenu.classList.toggle('dn'); // Alternar visibilidad del menú hamburguesa
     });
-
+  
     function adjustNavClass() {
       var nav = document.querySelector('header');
       if (window.innerWidth <= 1024) { 
         nav.classList.add('sticky', 'w-100', 'z-1');
+        mobileMenu.classList.add('dn'); // Asegurarse de que el menú hamburguesa esté colapsado
+        document.querySelectorAll('#mobile-menu li').forEach(function(menuItem) {
+          var hasChildren = menuItem.querySelector('ul');
+          if (hasChildren) {
+            hasChildren.classList.add('dn'); // Ocultar menús desplegables en vista móvil
+          }
+        });
       } else {
         nav.classList.remove('sticky', 'w-100', 'z-1');
-        if (!mobileMenu.classList.contains('dn')) {
-          mobileMenu.classList.add('dn');
-        }
+        mobileMenu.classList.add('dn'); // Asegurarse de que el menú hamburguesa esté colapsado
+        document.querySelectorAll('nav li.relative').forEach(function(menuItem) {
+          var hasChildren = menuItem.querySelector('ul');
+          if (hasChildren) {
+            hasChildren.classList.add('dn'); // Ocultar menús desplegables en vista de escritorio
+          }
+        });
       }
     }
-
+  
     adjustNavClass();
     window.addEventListener('resize', adjustNavClass);
-
+  
+    // Manejar clics en menús móviles
     document.querySelectorAll('#mobile-menu li').forEach(function(menuItem) {
       var hasChildren = menuItem.querySelector('ul');
       if (hasChildren) {
         menuItem.addEventListener('click', function(event) {
           event.stopPropagation();
-          hasChildren.classList.toggle('dn');
+          hasChildren.classList.toggle('dn'); // Alternar visibilidad del menú desplegable
         });
       }
     });
-
+  
+    // Manejar clics en menús de escritorio
     document.querySelectorAll('nav li.relative').forEach(function(menuItem) {
       var hasChildren = menuItem.querySelector('ul');
       if (hasChildren) {
         menuItem.addEventListener('click', function(event) {
           event.stopPropagation();
-          hasChildren.classList.toggle('dn');
+          hasChildren.classList.toggle('dn'); // Alternar visibilidad del menú desplegable
         });
       }
     });
   });
+  
 </script>
 

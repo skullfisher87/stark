@@ -1,4 +1,4 @@
-<div class="relative w-80-l mb4 bg-white nested-copy-line-height">
+<div class="relative w-80-l mb4 bg-white ">
   <div class="bg-white mb0 gray overflow-hidden">
     <!---{{with .CurrentSection.Title }}<span class="f6 db">{{ . }}</span>{{end}}-->
         {{ if not .Date.IsZero }}
@@ -14,9 +14,9 @@
     </h1>
     {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
     <img src="{{ $featured_image }}" class="img w-100" alt="image from {{ .Title }}">
-    <div class="nested-links f4-l color-deep-blue-stark lh-copy nested-copy-line-height">
+    <div class="nested-links f4-l color-deep-blue-stark">
       {{ .Summary }}
     </div>
-    <div><a href="{{.RelPermalink}}" class="hover-black-80 no-underline color-grey red-button br5 pa2 ph3 hover-color-white link dib mt3">{{ $.Param "read_more_copy" | default (i18n "readMore") }}</a></div>
+    <div><a href="{{.RelPermalink}}" class="button-xl hover-black-80 no-underline color-grey red-button br5 pa2 ph3 hover-color-white link dib mt3">{{ $.Param "read_more_copy" | default (i18n "readMore") }}</a></div>
   </div>
 </div>

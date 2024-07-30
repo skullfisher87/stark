@@ -7,7 +7,7 @@
     <title>FlashSystem Cyber ​​Vault, IBM&#39;s new solution will accelerate data recovery after Ransomware | Stark Tecnology</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="IBM presented its new Flash storage solutions, developed to help companies detect and recover “more quickly” from ransomware and cyberattacks. This was announced by IBM in a statement.">
-    <meta name="generator" content="Hugo 0.129.0">
+    <meta name="generator" content="Hugo 0.130.0">
     
     
     
@@ -24,6 +24,7 @@
   
 
     
+<script src="https://unpkg.com/scrollreveal"></script>
 
     
       
@@ -61,7 +62,7 @@
   <meta name="twitter:description" content="IBM presented its new Flash storage solutions, developed to help companies detect and recover “more quickly” from ransomware and cyberattacks. This was announced by IBM in a statement.">
 
 	
-    <script src="https://unpkg.com/scrollreveal"></script>
+    
   </head>
 
   <body class="ma0 Roboto fl w-100">
@@ -71,10 +72,10 @@
   
   <header class="bg-white ">
     <nav class="" role="navigation">
-  <div class="pv4-l ph5-l pv0-m ph3-m bg-white flex justify-between items-center center">
+  <div class="pv4-l ph5-l pv0 ph3 bg-white flex justify-between items-center center">
     <a href="/stark/en/" class="f3 fw2 hover-black no-underline black-70 dib">
       
-        <img src="/stark/LOGO-STARK.png" class="w100 mw12-l mw4-m" alt="Stark Tecnology" />
+        <img src="/stark/LOGO-STARK.png" class="w100 mw12-l mw4" alt="Stark Tecnology" />
       
     </a>
     
@@ -86,7 +87,7 @@
       </button>
     </div>
     
-    <div class="flex-l items-center dn db-l">
+    <div class="flex-l items-center dn-m db-l">
       
         <ul class="pl0 mr3 ">
           
@@ -101,12 +102,12 @@
             <li class="list f5 f4-ns fw4 dib relative pl3">
               
                 <span  class="pointer hover-black-80 no-underline color-grey" title="Services page">
-                   <div class="flex">
+                   <span class="flex">
                     Services
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 4 20 15" fill="currentColor" class="w2 relative">
                 <path fill-rule="evenodd" d="M10 14a1 1 0 01-.707-.293l-3-3a1 1 0 111.414-1.414L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3A1 1 0 0110 14z" clip-rule="evenodd" />
               </svg>
-                   </div>
+            </span>
               
                 </span>
                 <ul class="dn absolute list pa0 mt1 bg-white bl br bb b--black-05 z-1">
@@ -168,7 +169,7 @@
     </div>
   </div>
   
-  <div id="mobile-menu" class="dn bg-white dn-l center borderb-grey-1 fixed w-100 ph4">
+  <div id="mobile-menu" class=" bg-white dn-l center borderb-grey-1 fixed w-100 ph4">
     <ul class="list pa0 ma0 ">
       
         <li class="pa3 bordert-grey-1 ">
@@ -182,15 +183,15 @@
         <li class="pa3 bordert-grey-1 ">
           
                 <span  class="pointer hover-black-80 no-underline color-grey" title="Services page">
-                   <div class="flex">
+                   <span class="flex">
                     Services
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 4 20 15" fill="currentColor" class="w1 relative">
                 <path fill-rule="evenodd" d="M10 14a1 1 0 01-.707-.293l-3-3a1 1 0 111.414-1.414L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3A1 1 0 0110 14z" clip-rule="evenodd" />
               </svg>
-                   </div>
+            </span>
               
                 </span>
-                <ul class="dn relative list pa0 mt1 bg-white bl br bb b--black-05">
+                <ul class="dnrelative list pa0 mt1 bg-white bl br bb b--black-05">
                   
                     <li class="pv2 ph3 bt b--black-05 dim"><a class="fs-dropwdown hover-black-80 no-underline color-grey " href="/stark/en/security/" >Security</a></li>
                   
@@ -232,7 +233,7 @@
           
         </li>
       
-      <div class="absolute right-3 ">
+      <span class="absolute right-3 ">
 <h4></h4>
 <ul class="pl0 mr3mr3 pl3-l pl2">
     
@@ -243,7 +244,7 @@
 </ul>
 
 
-</div>
+</span>
     </ul>
   </div>
 </nav>
@@ -252,46 +253,60 @@
   document.addEventListener('DOMContentLoaded', function() {
     var menuToggle = document.getElementById('menu-toggle');
     var mobileMenu = document.getElementById('mobile-menu');
-
+  
     menuToggle.addEventListener('click', function() {
-      mobileMenu.classList.toggle('dn');
+      mobileMenu.classList.toggle('dn'); 
     });
-
+  
     function adjustNavClass() {
       var nav = document.querySelector('header');
       if (window.innerWidth <= 1024) { 
         nav.classList.add('sticky', 'w-100', 'z-1');
+        mobileMenu.classList.add('dn'); 
+        document.querySelectorAll('#mobile-menu li').forEach(function(menuItem) {
+          var hasChildren = menuItem.querySelector('ul');
+          if (hasChildren) {
+            hasChildren.classList.add('dn'); 
+          }
+        });
       } else {
         nav.classList.remove('sticky', 'w-100', 'z-1');
-        if (!mobileMenu.classList.contains('dn')) {
-          mobileMenu.classList.add('dn');
-        }
+        mobileMenu.classList.add('dn'); 
+        document.querySelectorAll('nav li.relative').forEach(function(menuItem) {
+          var hasChildren = menuItem.querySelector('ul');
+          if (hasChildren) {
+            hasChildren.classList.add('dn'); 
+          }
+        });
       }
     }
-
+  
     adjustNavClass();
     window.addEventListener('resize', adjustNavClass);
-
+  
+    
     document.querySelectorAll('#mobile-menu li').forEach(function(menuItem) {
       var hasChildren = menuItem.querySelector('ul');
       if (hasChildren) {
         menuItem.addEventListener('click', function(event) {
           event.stopPropagation();
-          hasChildren.classList.toggle('dn');
+          hasChildren.classList.toggle('dn'); 
         });
       }
     });
-
+  
+    
     document.querySelectorAll('nav li.relative').forEach(function(menuItem) {
       var hasChildren = menuItem.querySelector('ul');
       if (hasChildren) {
         menuItem.addEventListener('click', function(event) {
           event.stopPropagation();
-          hasChildren.classList.toggle('dn');
+          hasChildren.classList.toggle('dn'); 
         });
       }
     });
   });
+  
 </script>
 
 
@@ -302,12 +317,21 @@
 
 
 
-    <main role="main" class="ma0 bg-white pb3 fl w-100">
+    <main role="main" class="ma0 fade-in bg-white  fl w-100">
+      
+      <div class="pv3 ph3 w-80-l center tc dn">
+        <h1 class="f1-l fw6-l white mb0 mt4 ttu slh-title  mw8 center ph3-l">
+          FlashSystem Cyber ​​Vault, IBM&#39;s new solution will accelerate data recovery after Ransomware
+        </h1>
+     
+        
+      </div>
+  
       
   
   <article class="flex-l flex-wrap justify-between w-80-l center ph4-l">
-    <header class=" mw8 center ph3-l ph4">
-      <h1 class="pt4 tl-l f2 fw6-l color-red-stark pb4-l pb3 mt3 ttu slh-title w-80-l">
+    <header class=" mw8 center ph3">
+      <h1 class="pt4 tl-l f1-l fw6-l color-red-stark pb4-l pb3 mt3 ttu slh-title w-80-l">
           
           
         Blog
@@ -322,7 +346,7 @@
       
     </header>
     
-    <div class="nested-copy-line-height lh-copy gray  mw8 center ph3-l ph4 ">
+    <div class="gray mw8 center ph3 ">
       
       <img src="http://localhost:1313/stark/imagenes/cybervault.png" class="img w-100 w-80-l" alt="image from FlashSystem Cyber ​​Vault, IBM&#39;s new solution will accelerate data recovery after Ransomware">
       <div class="w-80-l f4-l color-deep-blue-stark "><p>IBM presented its new Flash storage solutions, developed to help companies detect and recover “more quickly” from ransomware and cyberattacks. This was announced by IBM in a statement.</p>
@@ -392,29 +416,28 @@
     </div>
 
     <aside class="w-30-l mt6-l">
-
-
-
-
-</aside>
+    
+    </aside>
 
   </article>
 
     </main>
-    <footer class="fl grey-stark bottom-0 w-100 pt5-l ph4-m pv5-m pb1 ph5-l" role="contentinfo">
-  <div class="flex justify-between flex-column-m">
+    <footer class="fl grey-stark bottom-0 w-100 pt5-l ph5-l ph3 pt4 pb1 ph4-l" role="contentinfo">
+  <div class="flex justify-between flex-row-l flex-column">
   
-    <div>
-      <a href="/stark/en/" class="f3 fw2 hover-black no-underline black-70 dib">
+    <div class="mb4 mb0-l">
+      <a href="/stark/en/" class="f3-l fw2 hover-black no-underline black-70 dib">
       
-        <img src="/stark/STARK-blanco.png" class="w100 mw5-ns" alt="Stark Tecnology" />
+        <img src="/stark/STARK-blanco.png" class="w100 mw5-l mw4" alt="Stark Tecnology" />
       
       </a>
     </div>
     
     <div class="white f4-l">
-       <p class="mv2 mt4-m">Bruselas 2480 casi Gumersindo Sosa</p>
+       <a class="white no-underline" href="https://www.google.com.py/maps/place/Bruselas+%26+Gumersindo+Sosa,+001410+Asunci%C3%B3n,+Paraguay/@-25.2889622,-57.564594,17z/data=!3m1!4b1!4m6!3m5!1s0x945da8af03ea857f:0xcbee6f7285838a93!8m2!3d-25.2889671!4d-57.5620191!16s%2Fg%2F11hb7gg001?hl=es&entry=ttu" target="_blank">
+       <p class="mv2">Bruselas 2480 casi Gumersindo Sosa</p>
        <p class="mv2">Asunción – Paraguay</p>
+        </a>
        <p class="mv4"><a class="white no-underline"  href="tel:+59521664701">+595 21 664701</a></p>
        <p class="mv2"><a class="white no-underline" href="mailto:info@stark.com.py">info@stark.com.py</a></p>
        <p class="mv2"><a class="white no-underline" href="mailto:ventas@stark.com.py">ventas@stark.com.py</a></p>
@@ -506,13 +529,15 @@
   </div>
   
   <p class="tc mb0 pt3">
-     <a class="f5 fw4 hover-white no-underline white-70 dn dib-ns pt2 ph3" href="http://localhost:1313/stark/en/" >
+     <a class="f5 fw4 hover-white no-underline white-70  pt2 ph3" href="http://localhost:1313/stark/en/" >
     &copy;  Stark Tecnology 2024 
      </a>
   </p>
   
 </footer>
 
+    
+    <script src="/stark/js/reveal.min.9bb5709d2d39cc858f6dc3b59c3242f3749f8ea902481cf57be6301ca3b02900.js"></script>
   </body>
 </html>
 

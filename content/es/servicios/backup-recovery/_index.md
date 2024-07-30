@@ -9,6 +9,6 @@ img1 = "./imagenes/Frame.png"
 
 +++
 
-{{< services h1_text="Backup & recovery" >}}
+{{< services h1_text="Backup & recovery" contact_url="contacto">}}
 Contamos con la experiencia y el conocimiento para asesorarte, rediseñar la arquitectura, implementar la solución, realizar las pruebas de recovery y acompañarte en situaciones de contingencia.
 {{< /services >}}

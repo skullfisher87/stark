@@ -13,6 +13,6 @@ img1 = "./../../servicios/cloud/imagenes/nube.png"
 +++
 
 
-{{< services h1_text="CLOUD Solutions" >}}
+{{< services h1_text="CLOUD Solutions" contact_url="en/contact">}}
 We advise our clients in identifying and migrating workloads to the cloud, obtaining the benefits of elasticity and rapid deployment of productive or development and testing work environments.
 {{< /services >}}

@@ -1,13 +1,15 @@
 {{ if .Inner }}
-  <article class="ph4-l ph4-ns mb3 w-100 center fl dn-m">
-    <section class="ml3-l mh4-l ph4 ph5-l pv4 pv5-l f3-l lh-copy black bg-white br-2-c vh-85-l">
+  <article class="w-100 center fl dn-m">
+    <section class="ml3-l mh5-l ph4 ph5-l pv4 pv5-l f3-l lh-copy black bg-white br-2-c vh-85-l">
       
       <div class="flex-l justify-between mb2-l mt4-l">
       <div class="pr4">
-      <h1 class="f1-stark-l tl mt0">{{ .Get "h1_text" }}</h1> 
-        <div class="w-100 tl f3-l color-grey">{{ .Inner | markdownify }}</div>
+      <h1 class="f1-stark-l tl mt0 mb3">{{ .Get "h1_text" }}</h1> 
+        <p class="w-100 tl f3-l mt0 color-grey">{{ .Inner | markdownify }}</p>
          <div class="mt5-l mb0-l mt4 mb5 fl">
-         <a class="hover-black-80 no-underline color-grey red-button br5 pa2 ph3 hover-color-white" href="#" title="Contacto página">
+         <a class="button-xl no-underline color-grey red-button br5 pa2 ph3 hover-white-50 f5" 
+            href="{{ .Site.BaseURL }}{{ .Get "contact_url" }}"
+            title="{{ i18n "contactTitle" }}">
                {{ i18n "solicitar" }}
          </a>
       </div>
@@ -22,21 +24,23 @@
     </section>
   </article>
   
-    <article class="ph4-l ph4-ns mb3 w-100 center fl dn-l">
-    <section class="ml3-l pv4 pv5-l f4-l lh-copy black bg-white br-2-c vh-85-l">
+    <article class="ph3 w-100 center fl dn-l">
+    <section class="pv4 bg-white vh-85-l">
       
-      <div class="flex flex-column items-center mb2-l mt4-l">
+      <div class="flex flex-column items-center">
       
-      <h1 class="f2 tl mt4">{{ .Get "h1_text" }}</h1> 
-   
+      <h1 class="f2-l tl mt4">{{ .Get "h1_text" }}</h1> 
+    
           <div class="flex justify-center pv4">
             <img class="w-50" src="{{ .Page.Params.img1 }}"> 
           </div>
       
         
-        <div class="w-100 tl  mt4 mb3 color-grey">{{ .Inner | markdownify }}</div>
+        <p class="w-100 tl  mt4 mb3 color-grey ph3">{{ .Inner | markdownify }}</p>
          <div class="mt5-l mt4 mb5 fl">
-         <a class="hover-black-80 no-underline color-grey red-button br5 pa2 ph3 hover-color-white" href="#" title="Contacto página">
+         <a class="no-underline color-grey red-button br5 pa2 ph3 hover-white-50 f5" 
+            href="{{ .Get "contact_url" }}"
+            title="{{ i18n "contactTitle" }}">
                {{ i18n "solicitar" }}
          </a>
         </div>

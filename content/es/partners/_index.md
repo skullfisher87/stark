@@ -12,6 +12,6 @@ img2 = "images/IBM-GOLD-PARTNER.png"
 +++
 
 
-{{< partners h2_text="conocé nuestros casos de éxito" >}}
+{{< partners h2_text="conocé nuestros casos de éxito" contact_url="contacto">}}
 Con un equipo altamente calificado y capacitado hemos ganado la confianza de importantes empresas y organismos públicos, no solo en Paraguay sino en varios países de sudamérica
 {{< /partners >}}

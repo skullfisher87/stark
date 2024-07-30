@@ -28,10 +28,6 @@
   border-radius:0 5rem 5rem 0;
 }
 
-.br-3-c {
-  border-radius:0 7rem 7rem 7rem;
-}
-
 .br-top {
   border-radius:3rem 3rem 0 0;
 
@@ -46,15 +42,25 @@
 
 .br-container-1 {
   border: 4px solid white;
-  border-radius: 0 75px 75px 100px;
+  border-radius: 0 75px 75px 75px;
   padding: 3rem;
+  padding-top: 2.5rem;
 }
 
 .right-3 {
     right: 3rem;
 }
+
+.min-h-230 {
+  min-height: 230px;
+}
+
 .vh-13 {
   height: 13vh;
+}
+
+.vh-40 {
+  height: 40vh;
 }
 
 .vh-80 {
@@ -70,7 +76,7 @@
 }
 
 .mw16-ns {
-    max-width: 16rem;
+  max-width: 16rem;
 }
 
 .color-deep-blue-stark {
@@ -152,6 +158,45 @@ textarea::placeholder {
   opacity: 1;
 }
 
+@media screen and (min-width: 100em) {
+  .f1-stark-xl {
+       font-size: 5rem !important;
+  }
+
+   .f1-xl {
+    font-size: 4rem !important;
+  }
+
+  .f2-xl {
+    font-size: 2.5rem !important;
+  }
+
+  .f3-xl {
+    font-size: 1.7rem !important;
+  }
+
+  .f4-xl {
+    font-size: 1.4rem !important;
+  }
+
+  .button-xl {
+    font-size: 1.3rem !important;
+  }
+
+  .font-button-xl  {
+    font-size: 1.2rem !important;
+  }
+
+  .mw6-l {
+    max-width: 29vw !important;
+  }
+
+  .min-h-230 {
+    min-height: 380px !important;
+  }
+   
+}
+
 @media screen and (min-width: 60em) {
    .f1-stark-l {
         font-size: 4rem;
@@ -166,20 +211,73 @@ textarea::placeholder {
     .vh-87-l {
         min-height: 87.4vh;
     }
+
+    .mw6-l {
+      max-width: 28vw;
+    }
     
     .mw12-l {
     max-width: 12rem;
     }
+
+    .br-3-c {
+      border-radius:0 6rem 6rem 6rem;
+    }
+
+    .min-h-230 {
+      min-height: 350px;
+    }
+
+    .vh-50-l {
+      max-height: 35vh !important;
+    } 
 }
+
+@media screen and (max-width: 30em) {
+  .f2-ns {
+    font-size: 1.5em;
+  }
+
+  .f4-m {
+    font-size: 1.1rem;
+  }
+
+  .br-3-c {
+    border-radius:0 5rem 5rem 5rem;
+  }
+
+}
+
 @media screen and (min-width: 30em) {
     .f2-ns {
         font-size: 1.5em;
     }
 }
-@media screen and (min-width: 30em) and (max-width: 60em) {
+@media screen  and (max-width: 60em) {
     .f4-m {
         font-size: 1.1rem;
     }
+
+    .br-3-c {
+      border-radius:0 5rem 5rem 5rem;
+    }
+
+    .bg-s-contain {
+      background-size: contain;
+    }
+
+    .dn-m {
+      display: none;
+    }
+}
+
+@media screen  and (max-width: 29em) {
+  h1 {
+    font-size: x-large;
+  }
+  h2 {
+    font-size: large;
+  }
 }
 
 /**
@@ -188,8 +286,8 @@ textarea::placeholder {
  * ----------------------------------------
  */
 .fade-in {
-	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	-webkit-animation: fade-in 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @-webkit-keyframes fade-in {

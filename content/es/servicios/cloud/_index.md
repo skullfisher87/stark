@@ -11,6 +11,6 @@ img1 = "./imagenes/nube.png"
 +++
 
 
-{{< services h1_text="Soluciones CLOUD" >}}
+{{< services h1_text="Soluciones CLOUD" contact_url="contacto">}}
 Asesoramos a nuestros clientes en identificar y migrar cargas de trabajo hacia la nube obteniendo los beneficios de la elasticidad y rápido despliegue de entornos de trabajo productivos o de desarrollo y prueba.
 {{< /services >}}

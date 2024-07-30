@@ -55,16 +55,31 @@
       {{ template "_internal/google_analytics.html" . }}
     {{ end }}
 	{{ block "head" . }}{{ partial "head-additions.html" . }}{{ end }}
-    <script src="https://unpkg.com/scrollreveal"></script>
+    
   </head>
 
   <body class="ma0 {{ $.Param "body_classes"  | default "bg-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }} fl w-100">
 
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
-    <main role="main" class="ma0 {{ $.Param "background_color"  | default "bg-white"}} pb3 fl w-100">
+    <main role="main" class="ma0 fade-in {{ $.Param "background_color"  | default "bg-white"}}  fl w-100">
+      
+      <div class="pv3 ph3 w-80-l center {{ .Params.text_align | default "tc" }} {{ .Params.head_title | default "" }}">
+        <h1 class="f1-l fw6-l {{ .Params.text_color | default "white" }} mb0 mt4 ttu slh-title  mw8 center ph3-l">
+          {{ .Title | default .Site.Title }}
+        </h1>
+     
+        {{ with .Params.description }}
+          <h2 class="fw1 f5 f3-l white measure-wide-l center lh-copy mt3 mb4">
+            {{ . }}
+          </h2>
+        {{ end }}
+      </div>
+  
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+    {{ $revealJS := resources.Get "js/reveal.js" | minify | fingerprint }}
+    <script src="{{ $revealJS.RelPermalink }}"></script>
   </body>
 </html>
 

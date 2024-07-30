@@ -12,6 +12,6 @@ img1 = "./../../servicios/consultoria/imagenes/Frame.png"
 +++
 
 
-{{< services h1_text="Consultancy">}}
+{{< services h1_text="Consultancy" contact_url="en/contact">}}
 Our IT Consultants work daily together with our clients' technical teams as an extended virtual team, providing support services or second-level technical assistance based on the needs of each client.
 {{< /services >}}

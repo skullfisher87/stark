@@ -10,6 +10,6 @@ img1 = "./imagenes/Frame.png"
 
 +++
 
-{{< services h1_text="Applicance para base de datos" >}}
+{{< services h1_text="Applicance para base de datos" contact_url="contacto">}}
 The way to transform, optimize and generate savings in the processing of critical company data is achieved through database appliances, we invite you to learn about them.
 {{< /services >}}

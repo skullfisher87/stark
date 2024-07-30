@@ -11,6 +11,6 @@ img1 = "./imagenes/Group.png"
 +++
 
 
-{{< services h1_text="Soluciones de seguridad" >}}
+{{< services h1_text="Soluciones de seguridad" contact_url="contacto">}}
 Asistimos a nuestros clientes a adoptar soluciones modernas de protección en tiempo real basados en el análisis del tráfico de la red y sus aplicaciones.
 {{< /services >}}

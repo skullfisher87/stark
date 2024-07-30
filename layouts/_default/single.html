@@ -6,8 +6,8 @@
 {{ define "main" }}
   {{ $section := .Site.GetPage "section" .Section }}
   <article class="flex-l flex-wrap justify-between w-80-l center ph4-l">
-    <header class=" mw8 center ph3-l ph4">
-      <h1 class="pt4 tl-l f2 fw6-l color-red-stark pb4-l pb3 mt3 ttu slh-title w-80-l">
+    <header class=" mw8 center ph3">
+      <h1 class="pt4 tl-l f1-l fw6-l color-red-stark pb4-l pb3 mt3 ttu slh-title w-80-l">
           {{/*
           CurrentSection allows us to use the section title instead of inferring from the folder.
           https://gohugo.io/variables/page/#section-variables-and-methods
@@ -42,7 +42,7 @@
       {{ end }}
     </header>
     
-    <div class="nested-copy-line-height lh-copy gray  mw8 center ph3-l ph4 {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "" }}">
+    <div class="gray mw8 center ph3 {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "" }}">
       {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
       <img src="{{ $featured_image }}" class="img w-100 w-80-l" alt="image from {{ .Title }}">
       <div class="w-80-l f4-l color-deep-blue-stark ">{{- .Content -}}</div>
@@ -59,7 +59,7 @@
     </div>
 
     <aside class="w-30-l mt6-l">
-      {{- partial "menu-contextual.html" . -}}
+    <!--  {{- partial "menu-contextual.html" . -}}-->
     </aside>
 
   </article>

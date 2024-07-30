@@ -12,6 +12,6 @@ head_title  = "dn"
 img1 = "./../../servicios/almacenamiento/imagenes/Frame.png"
 +++
 
-{{< services h1_text="Storage" >}}
+{{< services h1_text="Storage" contact_url="en/contact">}}
 Adopting new Software Defined Storage technologies provides the benefits of the public cloud in private or hybrid cloud environments, we invite you to learn about them.
 {{< /services >}}

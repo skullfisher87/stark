@@ -10,6 +10,6 @@ img1 = "./imagenes/Frame.png"
 +++
 
 
-{{< services h1_text="Consultoría" >}}
+{{< services h1_text="Consultoría" contact_url="contacto">}}
 Nuestros Consultores de TI trabajan diariamente en conjunto con los equipos técnicos de nuestros clientes como equipo virtual extendido brindando servicios de apoyo o asistencia técnica de segundo nivel en base a las necesidades de cada cliente.
 {{< /services >}}

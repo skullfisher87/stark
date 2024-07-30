@@ -11,4 +11,5 @@ background_color_class = "red-stark"
 background_color = "red-stark"
 +++
 
-{{< form-contact action="https://formspree.io/your@email.com" >}}
+{{< form-contact action="https://formspree.io/f/xovadjwg" >}}
+

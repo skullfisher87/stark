@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelectorAll("h1,h2, img, div, article");ScrollReveal().reveal(e,{opacity:0,duration:1e3,easing:"ease-in-out",reset:!1})})

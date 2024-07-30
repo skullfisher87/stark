@@ -1,19 +1,19 @@
 {{ define "main" }}
   {{ if .Content }}
-  <article class="nested-copy-line-height">
+  <article class="f4-l">
   
-    <section class="cf  f4 tc-l center lh-copy {{ $.Param "text_color" | default "mid-gray" }}">
+    <section class="cf {{ $.Param "text_color" | default "mid-gray" }}">
       {{ .Content }}
     </section>
   </article>
 {{ end }}
-    <section class="w-80-l center pv3 ph3-l">
+    <section class="w-80-l center pv3 ph4-l">
       {{ range .Paginator.Pages }}
-        <div class="flex-l flex-wrap justify-between mw8 center ph3-l ph4">
+        <div class="flex-l flex-wrap justify-between mw8 center ph3">
           {{ .Render "summary" }}
         </div>
       {{ end }}
     </section>
-    {{- template "_internal/pagination.html" . -}}
+    <div class="flex justify-center">{{- template "_internal/pagination.html" . -}}</div>
   </article>
 {{ end }}

@@ -11,6 +11,6 @@ head_title  = "dn"
 img1 = "./../../servicios/seguridad/imagenes/Group.png"
 +++
 
-{{< services h1_text="Security solutions" >}}
+{{< services h1_text="Security solutions" contact_url="en/contact">}}
 We assist our clients in adopting modern real-time protection solutions based on analysis of network traffic and its applications.
 {{< /services >}}

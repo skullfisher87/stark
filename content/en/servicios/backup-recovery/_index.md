@@ -12,6 +12,6 @@ head_title  = "dn"
 img1 = "./../../servicios/backup-recovery/imagenes/Frame.png"
 +++
 
-{{< services h1_text="Backup & recovery" >}}
+{{< services h1_text="Backup & recovery" contact_url="en/contact">}}
 We have the experience and knowledge to advise you, redesign the architecture, implement the solution, perform recovery tests and accompany you in contingency situations.
 {{< /services >}}

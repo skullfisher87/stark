@@ -20,17 +20,6 @@
   <header class="{{ .Params.background_color_class | default "bg-white" }}">
     {{ partial "site-navigation.html" . }}
       
-      <div class="pv3 ph3 w-80-l center {{ .Params.text_align | default "tc" }} {{ .Params.head_title | default "" }}">
-        <h1 class="f2 fw6-l {{ .Params.text_color | default "white" }} mb0 mt4 ttu slh-title  mw8 center ph3">
-          {{ .Title | default .Site.Title }}
-        </h1>
-     
-        {{ with .Params.description }}
-          <h2 class="fw1 f5 f3-l white measure-wide-l center lh-copy mt3 mb4">
-            {{ . }}
-          </h2>
-        {{ end }}
-      </div>
-  
+ 
   </header>
 {{ end }}

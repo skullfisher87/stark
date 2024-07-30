@@ -13,6 +13,8 @@ head_title  = "dn"
   
   section_text="Nuestro equipo está conformado por especialistas altamente calificados con amplia experiencia comprobable en las soluciones ofrecidas, tanto en forma local como internacional. LO QUE NOS DISTINGUE Compromiso y dedicación al servicio de su negocio. Experiencia en soluciones innovadoras."
   br_content="Con un equipo altamente calificado y capacitado hemos ganado la confianza de importantes empresas y organismos públicos, no solo en Paraguay sino en varios países de sudamérica."
+
+  contact_url="contacto"
 >}}
 
 Somos una empresa de servicios de tecnología presente desde hace 17 años en el mercado, ofreciendo desde sus inicios soluciones eficaces e innovadoras en diversas áreas del mundo IT, especializándose en las soluciones de infraestructura High End, (tanto en el ambiente de servidores x86 y RISC, ambientes SAN y storage) como en el área de Disponibilidad del Negocio & Seguridad.

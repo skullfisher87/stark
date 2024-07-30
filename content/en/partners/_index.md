@@ -12,6 +12,6 @@ img2 = "../../partners/images/IBM-GOLD-PARTNER.png"
 +++
 
 
-{{< partners h2_text="LEARN ABOUT OUR SUCCESS STORIES" >}}
+{{< partners h2_text="LEARN ABOUT OUR SUCCESS STORIES" contact_url="en/contact">}}
 With a highly qualified and trained team we have earned the trust of important companies and public organizations, not only in Paraguay but in several South American countries.
 {{< /partners >}}

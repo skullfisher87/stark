@@ -8,12 +8,14 @@ img1 = "./imagenes/home.png"
 img2 = "./imagenes/s2.png"
 img3 = "./imagenes/guardium.png"
 img4 = "./imagenes/qradar.png"
-
+background_services= "./imagenes/compu.png"
 +++
 
 
 {{< home 
     h1_text="Compromiso y dedicación al servicio de su negocio"
+
+    contact_url="contacto"
     
     section_heading="Nuestra Experiencia"
     section_text="Con un equipo altamente calificado y capacitado, hemos ganado la confianza de importantes empresas y organismos públicos, no solo en Paraguay sino en varios países de Sudamérica." 
@@ -33,17 +35,20 @@ img4 = "./imagenes/qradar.png"
     section_box_heading_2="Consultoría"  
     section_box_text_2="Brindando servicios de apoyo o asistencia técnica a nuestros clientes"
     
-    section_box_heading_3="Cloud Computing"  
+    section_box_heading_3="Cloud <br> Computing"  
     section_box_text_3="Identificar y migrar cargas de trabajo hacia la nube"
     
     section_box_heading_4="Applicance"  
     section_box_text_4="Para base de datos, para optimizar y generar ahorros en el procesamiento de los datos críticos"
     
-    section_box_heading_5="Backup & Recovery"  
+    section_box_heading_5="Backup <br> & Recovery"  
     section_box_text_5="Acompañarte en situaciones de contingencia"
     
     section_box_heading_6="Almacenamiento"  
     section_box_text_6="Nuevas tecnologías de software como Defined Storage"
+
+
+    blog_url="blog"
 >}}
 Experiencia en soluciones innovadoras
 {{< /home >}}
