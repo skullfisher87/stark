@@ -48,7 +48,7 @@
     </div>
   </div>
   <!-- Menú hamburguesa oculto por defecto en dispositivos grandes -->
-  <div id="mobile-menu" class="bg-white dn-l center borderb-grey-1 fixed w-100 ph4">
+  <div id="mobile-menu" class="bg-white dn-l center borderb-grey-1 absolute w-100 ph4">
     <ul class="list pa0 ma0">
       {{ range .Site.Menus.main }}
         <li class="pa3 bordert-grey-1 {{ if eq .Page.Params.identifier "contacto" }}flex fl w-100{{ end }}">
