@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Contacto on Mi sitio ES</title>
-    <link>https://skullfisher87.github.io/stark/contacto/</link>
-    <description>Recent content in Contacto on Mi sitio ES</description>
+    <title>Contacto on Stark Tecnologia</title>
+    <link>http://localhost:1313/stark/contacto/</link>
+    <description>Recent content in Contacto on Stark Tecnologia</description>
     <generator>Hugo</generator>
     <language>es</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://skullfisher87.github.io/stark/contacto/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/stark/contacto/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,0 +1,22 @@
+{{ if .Inner }}
+  <article class="ph4-l ph4-ns mb3 w-100 center fl">
+    <section class="ml3-l mh4-l ph4 ph5-l pv4 pv5-l f3-l lh-copy color-deep-blue-stark lite-grey-stark br-2-c vh-85-l fl">
+      <h1 class="f1-stark-l mb2-l mt4-l tl">{{ .Page.Title}}</h1> 
+      <div class="flex-l justify-between items-center">
+        <div class="w-100 tl">{{ .Inner | markdownify }}</div>
+        <div class="w-80 fl">
+          <div class="flex justify-end">
+            <img class="w-50" src="{{ .Page.Params.img1 }}"> 
+            <img class="w-50" src="{{ .Page.Params.img2 }}"> 
+          </div>
+        </div>
+      </div> 
+      <h2 class="ttu f5 f4-m f2-ns w-100 fl tl">{{ .Get "h2_text" }}</h2>
+      <div class="mt4-l mb0-l mt2 mb5 fl">
+         <a class="hover-black-80 no-underline color-grey red-button br5 pa2 ph3 hover-color-white" href="#" title="Contacto página">
+               {{ i18n "conocenos" }}
+         </a>
+      </div>
+    </section>
+  </article>
+{{ end }}

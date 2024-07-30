@@ -1,0 +1,33 @@
+<footer class="fl {{ .Site.Params.background_footer_color_class | default "bg-black" }} bottom-0 w-100 pt5-l ph4-m pv5-m pb1 ph5-l" role="contentinfo">
+  <div class="flex justify-between flex-column-m">
+  
+    <div>
+      <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-black no-underline black-70 dib">
+      {{ with .Site.Params.site_footer_logo }}
+        <img src="{{ relURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
+      {{ else }}
+        {{ .Site.Title }}
+      {{ end }}
+      </a>
+    </div>
+    
+    <div class="white f4-l">
+       <p class="mv2 mt4-m">Bruselas 2480 casi Gumersindo Sosa</p>
+       <p class="mv2">Asunción – Paraguay</p>
+       <p class="mv4"><a class="white no-underline"  href="tel:+59521664701">+595 21 664701</a></p>
+       <p class="mv2"><a class="white no-underline" href="mailto:info@stark.com.py">info@stark.com.py</a></p>
+       <p class="mv2"><a class="white no-underline" href="mailto:ventas@stark.com.py">ventas@stark.com.py</a></p>
+       <p class="mv2"><a class="white no-underline" href="mailto:soporte@stark.com.py">soporte@stark.com.py</a></p>
+    </div>
+        
+    <div>{{ partial "social-follow.html" . }}</div>
+    
+  </div>
+  
+  <p class="tc mb0 pt3">
+     <a class="f5 fw4 hover-white no-underline white-70 dn dib-ns pt2 ph3" href="{{ .Site.Home.Permalink }}" >
+    &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
+     </a>
+  </p>
+  
+</footer>

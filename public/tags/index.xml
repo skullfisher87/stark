@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Mi sitio ES</title>
-    <link>https://skullfisher87.github.io/stark/tags/</link>
-    <description>Recent content in Tags on Mi sitio ES</description>
+    <title>Tags on Stark Tecnologia</title>
+    <link>http://localhost:1313/stark/tags/</link>
+    <description>Recent content in Tags on Stark Tecnologia</description>
     <generator>Hugo</generator>
     <language>es</language>
-    <atom:link href="https://skullfisher87.github.io/stark/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Apr 2024 18:24:31 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/stark/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IBM</title>
+      <link>http://localhost:1313/stark/tags/ibm/</link>
+      <pubDate>Mon, 29 Apr 2024 18:24:31 -0300</pubDate>
+      <guid>http://localhost:1313/stark/tags/ibm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SEGURIDAD</title>
+      <link>http://localhost:1313/stark/tags/seguridad/</link>
+      <pubDate>Mon, 29 Apr 2024 18:24:31 -0300</pubDate>
+      <guid>http://localhost:1313/stark/tags/seguridad/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

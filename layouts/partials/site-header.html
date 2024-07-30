@@ -1,0 +1,36 @@
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+{{ if $featured_image }}
+  {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
+  <header>
+    {{ partial "site-navigation.html" . }}
+    
+      <div class="cover bg-top tc-l pv4 pv6-l ph3 ph4-ns w-80-l center {{ .Site.Params.cover_dimming_class | default "bg-black-60" }} {{ .Params.text_align | default "tc" }}"  style="background-image: url('{{ $featured_image }}');">
+        <h1 class="f2 fw6-l {{ .Params.text_color | default "white" }} mb0 mt4 ttu lh-title">
+          {{ .Title | default .Site.Title }}
+        </h1>
+        {{ with .Params.description }}
+          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
+            {{ . }}
+          </h2>
+        {{ end }}
+      </div>
+  
+  </header>
+{{ else }}
+  <header class="{{ .Params.background_color_class | default "bg-white" }}">
+    {{ partial "site-navigation.html" . }}
+      
+      <div class="pv3 ph3 w-80-l center {{ .Params.text_align | default "tc" }} {{ .Params.head_title | default "" }}">
+        <h1 class="f2 fw6-l {{ .Params.text_color | default "white" }} mb0 mt4 ttu slh-title  mw8 center ph3">
+          {{ .Title | default .Site.Title }}
+        </h1>
+     
+        {{ with .Params.description }}
+          <h2 class="fw1 f5 f3-l white measure-wide-l center lh-copy mt3 mb4">
+            {{ . }}
+          </h2>
+        {{ end }}
+      </div>
+  
+  </header>
+{{ end }}

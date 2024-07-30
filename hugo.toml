@@ -3,8 +3,11 @@ languageCode = 'es'
 title = 'Stark'
 theme = 'ananke'
 DefaultContentLanguage = "es"
-SectionPagesMenu = "main"
-Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+
+
+Paginate = 3 
+recent_posts_number = 3
+
 googleAnalytics = ""
 enableRobotsTXT = true
 
@@ -15,37 +18,39 @@ enableRobotsTXT = true
 
 [languages]
   [languages.es]
-   title = 'Mi sitio ES'
+   title = 'Stark Tecnologia'
    weight = 1
    contentDir = 'content/es'
-   #lenguageCode = 'es'
+   
   [languages.en]
-   title = 'My site EN'
+   title = 'Stark Tecnology'
    weight = '2'
    contentDir = 'content/en'
-   #lenguageCode = 'en-US'
    
 [params]
-  text_color = ""
-  author = ""
-  favicon = "stark_2022.png"
-  site_logo = "stark_2022.png"
-  description = "The last theme you'll ever need. Maybe."
-  # choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
-  background_color_class = "bg-black"
-  recent_posts_number = 3
 
+  custom_css = ["custom.css"]
+  text_color = "black"
+  #author = "Stark"
+  favicon = "favicon/android-chrome-512x512.png"
+  site_logo = "LOGO-STARK.png"
+  site_footer_logo = "STARK-blanco.png"
+  body_classes = "Roboto"
+  background_footer_color_class = "grey-stark"
+ 
 [[params.ananke_socials]]
-  name = "twitter"
-  url = "https://twitter.com/theNewDynamic"
+  name = "linkedin"
+    url = "#"
+[[params.ananke_socials]]
+  name = "facebook"
+    url = "#"
+[[params.ananke_socials]]
+  name = "instagram"
+    url = "#"
 [[params.ananke_socials]]
   name = "youtube"
-  url = "https://github.com/theNewDynamic"
-[[params.ananke_socials]]
-  name = 'facebook'
-[[params.ananke_socials]]
- name = 'instagram'
+    url = "#"
 
-[services.disqus]
-  shortname = 'YOURSHORTNAME'
+
+
 

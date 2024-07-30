@@ -1,0 +1,9 @@
+<ul class="pa0 pv3">
+  {{ range .GetTerms "tags" }}
+   <li class="list di">
+     <span class="color-red-stark f7 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">
+       {{- .LinkTitle -}}
+     </span>
+   </li>
+  {{ end }}
+</ul>

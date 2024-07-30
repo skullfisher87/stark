@@ -1,0 +1,153 @@
+{{ if .Inner }}
+  <article class="pl4-l w-100 center fl vh-87-l flex fade-in">
+  
+    <section class="ml3-l pl4 pl5-l pv5-l f4-l lh-copy black br-2-c  w-100">
+      
+      <div class="">
+      <h1 class="f1-stark-l tl mt4-l ">{{ .Get "h1_text" }}</h1> 
+        <div class="w-100 tl f3-l color-grey">{{ .Inner | markdownify }}</div>
+         <div class="mt5-l mb0-l mt4 mb5-l mb4 fl">
+         <a class="no-underline color-grey red-button br5 pa2 ph3 hover-color-white" href="#" title="Contacto página">
+               {{ i18n "conocenos" }}
+         </a>
+      </div>
+     
+        
+      </div> 
+      
+    </section>
+    
+      <section class="w-100 w-100-l flex">
+          <div class="flex w-100">
+            <img class="w-100" src="{{ .Page.Params.img1 }}"> 
+          </div>
+      </section>
+  
+  </article>
+  
+  <!-- sub -->
+    <article class="ph4-l ph4-ns pb4 w-100 center fl red-stark fade-in">
+    <section class="ml3-l mr4-l ph5-l pv4 pv5-l f3-l lh-copy black br-2-c vh-85-l">
+      
+      <div class="flex-l justify-between reverse mb2-l mt4-l">
+      <div class="ml6-l mt4-l">
+      <h1 class="f1-stark-l tl white mt0">{{ .Get "section_heading" }}</h1> 
+        <div class="w-100 tl f3-l white">{{ .Get "section_text" }}</div>
+         <div class="mt5-l mb0-l mt4 mb4 fl">
+         <a class="hover-black-50 no-underline black bg-white br5 pa2 ph3" href="#" title="Contacto página">
+               {{ i18n "ViewMore" }}
+         </a>
+      </div>
+      </div>
+        <div class="w-100-l fl br-3-c">
+         
+            <img class="w-100" src="{{ .Page.Params.img2 }}"> 
+          
+        </div>
+      </div> 
+      
+    </section>
+  </article>
+  
+    <!-- sub2 -->
+    <article class="pb4 w-100 center fl bg-white fade-in">
+    <section class="ml3-l ph5-l pv4 pv5-l f3-l lh-copy black br-2-c" style="background-image: url(./imagenes/misc.png);
+    background-repeat: no-repeat;
+    background-position: right;">
+       <h1 class="f1-stark-l tl color-grey mt0 ml6-l mt4-l ph0-l ph4">{{ .Get "section_heading_2" }}</h1> 
+      <div class="flex-l justify-between mb2-l mt4-l ph0-l ph4" >
+      
+      <div class="ml6-l mt0 w-100">
+     
+        <div class="w-100 tl f3-l color-grey ">{{ .Get "section_text_2" }}</div>
+         
+           <ul class="color-red-stark fw6 pt3 mb0">
+              <li class="pv2 ul-c ">QRADAR</li>
+              <li class="pv2 ul-c ">GUARDIUM</li>
+              <li class="pv2 ul-c ">SAFE GUARDED COPY</li>
+              <li class="pv2 ul-c ">COPIAS INMUTABLES</li>
+           </ul>
+       
+      </div>
+        <div class="w-100 fl br-3-c pl6-l flex flex-column-l justify-between-l items-center-m justify-around-m  ph4-m pv4-m">
+          <div>
+            <img class="mw8-l" src="{{ .Page.Params.img3 }}"> 
+          </div>
+          <div>
+            <img class="mw8-l" src="{{ .Page.Params.img4 }}"> 
+          </div>
+        </div>
+      </div> 
+      
+    </section>
+  </article>
+  
+  <!-- sub3 -->
+  <article class="w-100 center fl vh-87-l fade-in">
+  
+    <section class="w-100">
+      <div  class="lh-copy red-stark pv4 pv5-l">
+      <h1 class="f2 white tc mt0  ttu">{{ .Get "section_heading_3" }}</h1> 
+        <div class="w-100 tl f3-l white tc">
+           <span>{{ .Get "section_subheading_3" }}</span> <br><span>{{ .Get "section_subheading_4" }}</span></div>
+      </dvi>
+    </section>
+    
+    
+    <section class="w-100 pv5 fl ph4-m" style="background-image: url(./imagenes/compu.png);
+    background-repeat: no-repeat;
+    background-size: cover;">
+      
+      <div class="flex-l reverse ph6-l justify-between">
+        <div class="w-50-l ph5 fl br-3-c linear-red-stark-op">
+            <h2 class="f1-stark-l white fw9 mb0">{{ .Get "section_box_heading_1" }}</h2> 
+            <p class="f3 white pb6">{{ .Get "section_box_text_1" }}</p>
+        </div>
+      </div> 
+      
+      <div class="flex-l  ph6-l justify-between">
+         <div class="w-50-l ph5 fl br-3-c linear-red-stark-op">
+            <h2 class="f1-stark-l white fw9 mb0">{{ .Get "section_box_heading_2" }}</h2> 
+            <p class="f3 white pb6">{{ .Get "section_box_text_2" }}</p>
+        </div>
+      </div> 
+      
+      <div class="flex-l reverse ph6-l justify-between">
+        <div class="w-50-l ph5 fl br-3-c linear-red-stark-op">
+            <h2 class="f1-stark-l white fw9 mb0">{{ .Get "section_box_heading_3" }}</h2> 
+            <p class="f3 white pb6">{{ .Get "section_box_text_3" }}</p>
+        </div>
+      </div> 
+      
+      <div class="flex-l ph6-l justify-between">
+        <div class="w-50-l ph5 fl br-3-c linear-red-stark-op">
+            <h2 class="f1-stark-l white fw9 mb0">{{ .Get "section_box_heading_4" }}</h2> 
+            <p class="f3 white pb6">{{ .Get "section_box_text_4" }}</p> 
+        </div>
+      </div> 
+      
+      <div class="flex-l reverse ph6-l justify-between">
+        <div class="w-50-l ph5  fl br-3-c linear-red-stark-op">
+            <h2 class="f1-stark-l white fw9 mb0">{{ .Get "section_box_heading_5" }}</h2> 
+            <p class="f3 white pb6">{{ .Get "section_box_text_5" }}</p> 
+        </div>
+      </div> 
+      
+      <div class="flex-l ph6-l justify-between">
+        <div class="w-50-l ph5 fl br-3-c linear-red-stark-op">
+            <h2 class="f1-stark-l white fw9 mb0">{{ .Get "section_box_heading_6" }}</h2> 
+            <p class="f3 white pb6">{{ .Get "section_box_text_6" }}</p>
+        </div>
+      </div> 
+      
+     
+    </section>
+ 
+    
+     <section class="w-100">
+      <div  class="lh-copy red-stark pv4 pv5-l">
+      <h1 class="f2 white tc mt0  ttu">{{ .Get "section_heading_4" }}</h1> 
+    </section>
+  
+  </article>
+{{ end }}

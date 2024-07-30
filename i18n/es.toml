@@ -1,0 +1,86 @@
+[more]
+other = "Más"
+
+[allTitle]
+other = "Todos los {{.Title }}"
+
+[recentTitle]
+other = "{{.Title }} recientes"
+
+[readMore]
+other = "Leer más"
+
+[ViewMore]
+other = "Ver más"
+
+[by]
+other = "Por"
+
+[whatsInThis]
+other = "Qué hay en este {{ .Type }}"
+
+[related]
+other = "Relacionado"
+
+[conocenos]
+other = "Conocenos"
+
+[solicitar]
+other = "Solicitar"
+
+[yourName]
+other = "Nombre"
+
+[yourLastName]
+other = "Apellido"
+
+[emailAddress]
+other = "Email"
+
+[phoneNumber]
+other = "Teléfono"
+
+[companyName]
+other = "Empresa"
+
+[message]
+other = "Mensaje"
+
+[enterName]
+other = "Ingresar nombre"
+
+[enterLastName]
+other = "Ingresar apellido"
+
+[enterEmail]
+other = "Ingresar email"
+
+[enterPhone]
+other = "Ingresar teléfono"
+
+[enterCompany]
+other = "Ingresar empresa"
+
+[enterMessage]
+other = "Ingresar mensaje"
+
+[emailRequiredNote]
+other = "Se requiere una dirección de correo electrónico."
+
+[send]
+other = "Enviar"
+
+[taxonomyPageList]
+other = "A continuación encontrará las páginas asociadas a “{{ .Title }}”"
+
+[readingTime]
+one = "Lectura en un minuto"
+other = "Lectura en {{ .Count }} minutos"
+
+[wordCount]
+one = "Una palabra"
+other = "{{ .Count }} palabras"
+
+[pageTitle]
+other = "{{ .Name }} página"
+

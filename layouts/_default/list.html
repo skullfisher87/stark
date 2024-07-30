@@ -1,0 +1,19 @@
+{{ define "main" }}
+  {{ if .Content }}
+  <article class="nested-copy-line-height">
+  
+    <section class="cf  f4 tc-l center lh-copy {{ $.Param "text_color" | default "mid-gray" }}">
+      {{ .Content }}
+    </section>
+  </article>
+{{ end }}
+    <section class="w-80-l center pv3 ph3-l">
+      {{ range .Paginator.Pages }}
+        <div class="flex-l flex-wrap justify-between mw8 center ph3-l ph4">
+          {{ .Render "summary" }}
+        </div>
+      {{ end }}
+    </section>
+    {{- template "_internal/pagination.html" . -}}
+  </article>
+{{ end }}

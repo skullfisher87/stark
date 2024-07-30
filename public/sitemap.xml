@@ -2,16 +2,16 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <sitemap>
-    <loc>https://skullfisher87.github.io/stark/es/sitemap.xml</loc>
+    <loc>http://localhost:1313/stark/es/sitemap.xml</loc>
     
-      <lastmod>2024-04-29T18:36:52-03:00</lastmod>
+      <lastmod>2024-07-10T23:44:12-03:00</lastmod>
     
   </sitemap>
   
   <sitemap>
-    <loc>https://skullfisher87.github.io/stark/en/sitemap.xml</loc>
+    <loc>http://localhost:1313/stark/en/sitemap.xml</loc>
     
-      <lastmod>2024-04-29T18:37:04-03:00</lastmod>
+      <lastmod>2024-07-11T17:57:30-03:00</lastmod>
     
   </sitemap>
   

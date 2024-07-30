@@ -1,0 +1,22 @@
+<div class="relative w-80-l mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb0 gray overflow-hidden">
+    <!---{{with .CurrentSection.Title }}<span class="f6 db">{{ . }}</span>{{end}}-->
+        {{ if not .Date.IsZero }}
+      <time class="f6 mv4-l mv2 dib tracked-l" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+        {{- .Date | time.Format (default "January 2, 2006" .Site.Params.date_format) -}}
+      </time>
+      <span class="f6 mv4-l mv2 dib tracked-l"> - {{ i18n "readingTime" .ReadingTime }} </span>
+      {{end}}
+    <h1 class="f2-l f3 mt0">
+      <a href="{{ .RelPermalink }}" class="link color-deep-blue-stark dim">
+        {{ .Title }}
+      </a>
+    </h1>
+    {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+    <img src="{{ $featured_image }}" class="img w-100" alt="image from {{ .Title }}">
+    <div class="nested-links f4-l color-deep-blue-stark lh-copy nested-copy-line-height">
+      {{ .Summary }}
+    </div>
+    <div><a href="{{.RelPermalink}}" class="hover-black-80 no-underline color-grey red-button br5 pa2 ph3 hover-color-white link dib mt3">{{ $.Param "read_more_copy" | default (i18n "readMore") }}</a></div>
+  </div>
+</div>

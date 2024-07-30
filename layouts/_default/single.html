@@ -1,0 +1,66 @@
+{{ define "header" }}
+   {{/* We can override any block in the baseof file be defining it in the template */}}
+  {{ partial "site-header-posts.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  {{ $section := .Site.GetPage "section" .Section }}
+  <article class="flex-l flex-wrap justify-between w-80-l center ph4-l">
+    <header class=" mw8 center ph3-l ph4">
+      <h1 class="pt4 tl-l f2 fw6-l color-red-stark pb4-l pb3 mt3 ttu slh-title w-80-l">
+          {{/*
+          CurrentSection allows us to use the section title instead of inferring from the folder.
+          https://gohugo.io/variables/page/#section-variables-and-methods
+          */}}
+          
+        {{ .CurrentSection.Title }}
+      </h1>
+       {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
+      {{ if not .Date.IsZero }}
+      <time class="f6 mb2 mb0-l pt2-l dib tracked-l gray" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+        {{- .Date | time.Format (default "January 2, 2006" .Site.Params.date_format) -}}
+      </time>
+      {{end}}
+      <h1 class="color-deep-blue-stark dim f2-l f3  mt0 mt4-l w-80-l">
+        {{- .Title -}}
+      </h1>
+      {{ with .Params.author | default .Site.Params.author }}
+      <p class="tracked-l">
+        {{ $.Render "by" }} <strong>
+        {{- if reflect.IsSlice . -}}
+            {{ delimit . ", " | markdownify }}
+        {{- else -}}
+            {{ . | markdownify }}
+        {{- end -}}
+        </strong>
+      </p>
+      {{ end }}
+   
+      {{ if (or (eq (.Param "show_reading_time") true) (eq $section.Params.show_reading_time true) )}}
+        <!---<span class="f6 mv4 dib tracked"> - {{ i18n "readingTime" .ReadingTime }} </span>--->
+       <!--- <span class="f6 mv4 dib tracked"> - {{ i18n "wordCount" .WordCount }} </span>--->
+      {{ end }}
+    </header>
+    
+    <div class="nested-copy-line-height lh-copy gray  mw8 center ph3-l ph4 {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "" }}">
+      {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+      <img src="{{ $featured_image }}" class="img w-100 w-80-l" alt="image from {{ .Title }}">
+      <div class="w-80-l f4-l color-deep-blue-stark ">{{- .Content -}}</div>
+      <div> {{ partial "social-share-blog.html" . }}</div>
+      {{- partial "tags.html" . -}}
+      <div class="mt6 instapaper_ignoref">
+      {{ if .Site.Config.Services.Disqus.Shortname }}
+        {{ template "_internal/disqus.html" . }}
+      {{ end }}
+      {{ if .Site.Params.commentoEnable }}
+        {{- partial "commento.html" . -}}
+      {{ end }}
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+      {{- partial "menu-contextual.html" . -}}
+    </aside>
+
+  </article>
+{{ end }}

@@ -1,0 +1,42 @@
+{{ $.Scratch.Add "labelClasses" "f6 b db mb1 mt3 sans-serif " }}
+{{ $.Scratch.Add "inputClasses" "w-100 f5 pv3 ph3  bn" }}
+
+<form class="black-80 sans-serif tl-l center measure-wide ph5 pt4" accept-charset="UTF-8" action="{{ .Get "action" }}" method="POST" role="form">
+
+    <div class="mb3">     
+        <input type="text" id="name" name="name" class=" w-100 f5 pv2 pv3-l ph3  bn bg-white br4" required placeholder="{{ i18n "enterName" }}" aria-labelledby="name"/>
+        <label class="b white f6 mb1 mt1 ml3 db" for="name">{{ i18n "yourName" }}</label>
+    </div>
+
+    <div class="mb3">      
+        <input type="text" id="lastname" name="lastname" class="w-100 f5 pv2 pv3-l ph3  bn bg-white br4" required placeholder="{{ i18n "enterLastName" }}" aria-labelledby="lastname"/>
+        <label class="b white f6 mb1 mt1 ml3 db" for="lastname">{{ i18n "yourLastName" }}</label>
+    </div>
+
+    <div class="mb3">     
+        <input type="email" id="email" name="email" class="w-100 f5 pv2 pv3-l ph3  bn bg-white br4" required placeholder="{{ i18n "enterEmail" }}" aria-labelledby="email"/>
+        <label class="b white f6 mb1 mt1 ml3 db" for="email">{{ i18n "emailAddress" }}</label>
+       <!--- <div class="requirements f6 gray glow i ph3 overflow-hidden"> 
+            {{ i18n "emailRequiredNote" }} --->
+        </div>
+    </div>
+
+    <div class="mb3">
+        <input type="tel" id="phone" name="phone" class="w-100 f5 pv2 pv3-l ph3  bn bg-white br4" required placeholder="{{ i18n "enterPhone" }}" aria-labelledby="phone"/>
+        <label class="b white f6 mb1 mt1 ml3 db" for="phone">{{ i18n "phoneNumber" }}</label>
+    </div>
+
+    <div class="mb3">
+        <input type="text" id="company" name="company" class="w-100 f5 pv2 pv3-l ph3  bn bg-white br4" placeholder="{{ i18n "enterCompany" }}" aria-labelledby="company"/>
+        <label class="b white f6 mb1 mt1 ml3 db" for="company">{{ i18n "companyName" }}</label>
+    </div>
+
+    <div class="mb3">
+        <textarea id="message" name="message" class="{{ $.Scratch.Get "inputClasses" }} h4 bg-white br4" placeholder="{{ i18n "enterMessage" }}" aria-labelledby="message"></textarea>
+        <label class="b white f6 mb1 mt1 ml3 db" for="message">{{ i18n "message" }}</label>
+    </div>
+
+    <input class="db br5 fr mv2 white pa3 bn hover-bg-gray bg-animate grey-button pl4 pr4" type="submit" value="{{ i18n "send" }}" />
+
+</form>
+
