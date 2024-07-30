@@ -1,0 +1,116 @@
+[1mdiff --git a/layouts/shortcodes/services.html b/layouts/shortcodes/services.html[m
+[1mindex e0bc530..98fa0b4 100644[m
+[1m--- a/layouts/shortcodes/services.html[m
+[1m+++ b/layouts/shortcodes/services.html[m
+[36m@@ -39,7 +39,7 @@[m
+         <p class="w-100 tl  mt4 mb3 color-grey ph3">{{ .Inner | markdownify }}</p>[m
+          <div class="mt5-l mt4 mb5 fl">[m
+          <a class="no-underline color-grey red-button br5 pa2 ph3 hover-white-50 f5" [m
+[31m-            href="{{ .Get "contact_url" }}"[m
+[32m+[m[32m            href="{{ .Site.BaseURL }}{{ .Get "contact_url" }}"[m
+             title="{{ i18n "contactTitle" }}">[m
+                {{ i18n "solicitar" }}[m
+          </a>[m
+[1mdiff --git a/public/blog/post/mi-cuarto-post/index.html b/public/blog/post/mi-cuarto-post/index.html[m
+[1mindex c86d7e9..1243150 100644[m
+[1m--- a/public/blog/post/mi-cuarto-post/index.html[m
+[1m+++ b/public/blog/post/mi-cuarto-post/index.html[m
+[36m@@ -25,6 +25,7 @@[m
+ [m
+     [m
+ <script src="https://unpkg.com/scrollreveal"></script>[m
+[32m+[m[32m<script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>[m
+ [m
+     [m
+       [m
+[36m@@ -519,7 +520,7 @@[m
+ </footer>[m
+ [m
+     [m
+[31m-    <script src="/stark/js/reveal.min.9bb5709d2d39cc858f6dc3b59c3242f3749f8ea902481cf57be6301ca3b02900.js"></script>[m
+[32m+[m[32m    <script src="/stark/js/reveal.min.01517976f3e964c9cf976381b3282a11d4d65b2e3b6fd82317b7042b11615e0a.js"></script>[m
+   </body>[m
+ </html>[m
+ [m
+[1mdiff --git a/public/servicios/almacenamiento/index.html b/public/servicios/almacenamiento/index.html[m
+[1mindex 97c90d1..9800ff2 100644[m
+[1m--- a/public/servicios/almacenamiento/index.html[m
+[1m+++ b/public/servicios/almacenamiento/index.html[m
+[36m@@ -376,7 +376,7 @@[m [mSolicitar ">[m
+         <p class="w-100 tl  mt4 mb3 color-grey ph3">Adoptar las nuevas tecnologías de Software Defined Storage brindan los beneficios de la nube pública en entornos de nube privados o híbridos, te invitamos a conocerlos.</p>[m
+          <div class="mt5-l mt4 mb5 fl">[m
+          <a class="no-underline color-grey red-button br5 pa2 ph3 hover-white-50 f5" [m
+[31m-            href="contacto"[m
+[32m+[m[32m            href="http://localhost:1313/stark/contacto"[m
+             title="">[m
+                Solicitar[m
+          </a>[m
+[1mdiff --git a/public/servicios/applicance/index.html b/public/servicios/applicance/index.html[m
+[1mindex d70547c..3c82aae 100644[m
+[1m--- a/public/servicios/applicance/index.html[m
+[1m+++ b/public/servicios/applicance/index.html[m
+[36m@@ -376,7 +376,7 @@[m [mSolicitar ">[m
+         <p class="w-100 tl  mt4 mb3 color-grey ph3">The way to transform, optimize and generate savings in the processing of critical company data is achieved through database appliances, we invite you to learn about them.</p>[m
+          <div class="mt5-l mt4 mb5 fl">[m
+          <a class="no-underline color-grey red-button br5 pa2 ph3 hover-white-50 f5" [m
+[31m-            href="contacto"[m
+[32m+[m[32m            href="http://localhost:1313/stark/contacto"[m
+             title="">[m
+                Solicitar[m
+          </a>[m
+[1mdiff --git a/public/servicios/backup-recovery/index.html b/public/servicios/backup-recovery/index.html[m
+[1mindex c48993e..82ec324 100644[m
+[1m--- a/public/servicios/backup-recovery/index.html[m
+[1m+++ b/public/servicios/backup-recovery/index.html[m
+[36m@@ -376,7 +376,7 @@[m [mSolicitar ">[m
+         <p class="w-100 tl  mt4 mb3 color-grey ph3">Contamos con la experiencia y el conocimiento para asesorarte, rediseñar la arquitectura, implementar la solución, realizar las pruebas de recovery y acompañarte en situaciones de contingencia.</p>[m
+          <div class="mt5-l mt4 mb5 fl">[m
+          <a class="no-underline color-grey red-button br5 pa2 ph3 hover-white-50 f5" [m
+[31m-            href="contacto"[m
+[32m+[m[32m            href="http://localhost:1313/stark/contacto"[m
+             title="">[m
+                Solicitar[m
+          </a>[m
+[1mdiff --git a/public/servicios/consultoria/index.html b/public/servicios/consultoria/index.html[m
+[1mindex 562664b..a1fa4ac 100644[m
+[1m--- a/public/servicios/consultoria/index.html[m
+[1m+++ b/public/servicios/consultoria/index.html[m
+[36m@@ -25,6 +25,7 @@[m
+ [m
+     [m
+ <script src="https://unpkg.com/scrollreveal"></script>[m
+[32m+[m[32m<script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>[m
+ [m
+     [m
+       [m
+[36m@@ -372,7 +373,7 @@[m [mSolicitar Consultoría Nuestros Consultores de TI trabajan diariamente en conjun[m
+         <p class="w-100 tl  mt4 mb3 color-grey ph3">Nuestros Consultores de TI trabajan diariamente en conjunto con los equipos técnicos de nuestros clientes como equipo virtual extendido brindando servicios de apoyo o asistencia técnica de segundo nivel en base a las necesidades de cada cliente.</p>[m
+          <div class="mt5-l mt4 mb5 fl">[m
+          <a class="no-underline color-grey red-button br5 pa2 ph3 hover-white-50 f5" [m
+[31m-            href="contacto"[m
+[32m+[m[32m            href="http://localhost:1313/stark/contacto"[m
+             title="">[m
+                Solicitar[m
+          </a>[m
+[36m@@ -511,7 +512,7 @@[m [mSolicitar Consultoría Nuestros Consultores de TI trabajan diariamente en conjun[m
+ </footer>[m
+ [m
+     [m
+[31m-    <script src="/stark/js/reveal.min.9bb5709d2d39cc858f6dc3b59c3242f3749f8ea902481cf57be6301ca3b02900.js"></script>[m
+[32m+[m[32m    <script src="/stark/js/reveal.min.01517976f3e964c9cf976381b3282a11d4d65b2e3b6fd82317b7042b11615e0a.js"></script>[m
+   </body>[m
+ </html>[m
+ [m
+[1mdiff --git a/public/servicios/seguridad/index.html b/public/servicios/seguridad/index.html[m
+[1mindex 4e2859f..55ef65c 100644[m
+[1m--- a/public/servicios/seguridad/index.html[m
+[1m+++ b/public/servicios/seguridad/index.html[m
+[36m@@ -376,7 +376,7 @@[m [mSolicitar ">[m
+         <p class="w-100 tl  mt4 mb3 color-grey ph3">Asistimos a nuestros clientes a adoptar soluciones modernas de protección en tiempo real basados en el análisis del tráfico de la red y sus aplicaciones.</p>[m
+          <div class="mt5-l mt4 mb5 fl">[m
+          <a class="no-underline color-grey red-button br5 pa2 ph3 hover-white-50 f5" [m
+[31m-            href="contacto"[m
+[32m+[m[32m            href="http://localhost:1313/stark/contacto"[m
+             title="">[m
+                Solicitar[m
+          </a>[m

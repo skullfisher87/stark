@@ -1,4 +1,4 @@
-<nav class="" role="navigation">
+<nav role="navigation">
   <div class="pv4-l ph5-l pv0 ph3 bg-white flex justify-between items-center center">
     <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-black no-underline black-70 dib">
       {{ with .Site.Params.site_logo }}
@@ -22,18 +22,17 @@
           {{ range .Site.Menus.main }}
             <li class="list f5 f4-ns fw4 dib relative {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl5" "pl3" }}">
               {{ if .HasChildren }}
-                <span  class="pointer hover-black-80 no-underline color-grey" title="{{ i18n "pageTitle" . }}">
-                   <span class="flex">
+                <span class="pointer hover-black-80 no-underline color-grey" title="{{ i18n "pageTitle" . }}">
+                  <span class="flex">
                     {{ .Name }}
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 4 20 15" fill="currentColor" class="w2 relative">
-                <path fill-rule="evenodd" d="M10 14a1 1 0 01-.707-.293l-3-3a1 1 0 111.414-1.414L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3A1 1 0 0110 14z" clip-rule="evenodd" />
-              </svg>
-            </span>
-              
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 4 20 15" fill="currentColor" class="w2 relative">
+                      <path fill-rule="evenodd" d="M10 14a1 1 0 01-.707-.293l-3-3a1 1 0 111.414-1.414L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3A1 1 0 0110 14z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
                 </span>
                 <ul class="dn absolute list pa0 mt1 bg-white bl br bb b--black-05 z-1">
                   {{ range .Children }}
-                    <li class="pv2 ph3 bt b--black-05 dim"><a class="fs-dropwdown hover-black-80 no-underline color-grey " href="{{ .URL }}" >{{ .Name }}</a></li>
+                    <li class="pv2 ph3 bt b--black-05 dim"><a class="fs-dropwdown hover-black-80 no-underline color-grey" href="{{ .URL }}">{{ .Name }}</a></li>
                   {{ end }}
                 </ul>
               {{ else }}
@@ -49,33 +48,32 @@
     </div>
   </div>
   <!-- Menú hamburguesa oculto por defecto en dispositivos grandes -->
-  <div id="mobile-menu" class=" bg-white dn-l center borderb-grey-1 fixed w-100 ph4">
-    <ul class="list pa0 ma0 ">
+  <div id="mobile-menu" class="bg-white dn-l center borderb-grey-1 fixed w-100 ph4">
+    <ul class="list pa0 ma0">
       {{ range .Site.Menus.main }}
-        <li class="pa3 bordert-grey-1 {{ if eq .Page.Params.identifier "contacto" }} flex fl w-100{{ end }}">
+        <li class="pa3 bordert-grey-1 {{ if eq .Page.Params.identifier "contacto" }}flex fl w-100{{ end }}">
           {{ if .HasChildren }}
-                <span  class="pointer hover-black-80 no-underline color-grey" title="{{ i18n "pageTitle" . }}">
-                   <span class="flex">
-                    {{ .Name }}
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 4 20 15" fill="currentColor" class="w1 relative">
-                <path fill-rule="evenodd" d="M10 14a1 1 0 01-.707-.293l-3-3a1 1 0 111.414-1.414L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3A1 1 0 0110 14z" clip-rule="evenodd" />
-              </svg>
+            <span class="pointer hover-black-80 no-underline color-grey" title="{{ i18n "pageTitle" . }}">
+              <span class="flex">
+                {{ .Name }}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 4 20 15" fill="currentColor" class="w1 relative">
+                  <path fill-rule="evenodd" d="M10 14a1 1 0 01-.707-.293l-3-3a1 1 0 111.414-1.414L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3A1 1 0 0110 14z" clip-rule="evenodd" />
+                </svg>
+              </span>
             </span>
-              
-                </span>
-                <ul class="dnrelative list pa0 mt1 bg-white bl br bb b--black-05">
-                  {{ range .Children }}
-                    <li class="pv2 ph3 bt b--black-05 dim"><a class="fs-dropwdown hover-black-80 no-underline color-grey " href="{{ .URL }}" >{{ .Name }}</a></li>
-                  {{ end }}
-                </ul>
-              {{ else }}
+            <ul class="dnrelative list pa0 mt1 bg-white bl br bb b--black-05">
+              {{ range .Children }}
+                <li class="pv2 ph3 bt b--black-05 dim"><a class="fs-dropwdown hover-black-80 no-underline color-grey" href="{{ .URL }}">{{ .Name }}</a></li>
+              {{ end }}
+            </ul>
+          {{ else }}
             <a class="hover-black-80 no-underline color-grey {{ if eq .Page.Params.identifier "contacto" }}{{ .Page.Params.menu_background }}{{ end }}" href="{{ .URL }}" title="{{ i18n "pageTitle" . }}">
               {{ .Name }}
             </a>
           {{ end }}
         </li>
       {{ end }}
-      <span class="absolute right-3 ">{{ partial "i18nlist.html" . }}</span>
+      <span class="absolute right-3">{{ partial "i18nlist.html" . }}</span>
     </ul>
   </div>
 </nav>
@@ -137,6 +135,4 @@
       }
     });
   });
-  
 </script>
-
