@@ -9,7 +9,7 @@
             <img src="{{ $featured_image }}" class="img w-100 br-top" alt="image from {{ .Title }}">
           </a>
         </div> 
-      {{ end }}
+      {{ end }} 
       <div class="blah ph4 pv4 w-100{{ if $featured_image }} {{ cond (eq $.Site.Language.LanguageDirection "rtl") "" "" }}{{ end }}">
         <h1 class="f4 white mt0 lh-title ttu">
           <a href="{{.RelPermalink}}" class="white link">

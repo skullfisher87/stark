@@ -3,7 +3,7 @@ title = "FlashSystem Cyber ​​Vault, IBM's new solution will accelerate data 
 date = 2024-04-29T18:24:31-03:00
 draft = false
 #description = "Ciber Seguridad"
-featured_image = "/imagenes/cybervault.png"
+featured_image = "./imagenes/cybervault.png"
 tags = ["IBM", "SECURITY"]
 
 head_title  = "dn"

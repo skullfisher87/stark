@@ -3,7 +3,7 @@ title = 'FlashSystem Cyber Vault, la nueva solución de IBM acelerará la recupe
 date = 2024-04-29T18:24:31-03:00
 draft = false
 #description = "Ciber Seguridad"
-featured_image = "/imagenes/cybervault.png"
+featured_image = "./imagenes/cybervault.png"
 tags = ["IBM", "SEGURIDAD"]
 
 head_title  = "dn"
