@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const allElements = document.querySelectorAll('h1, h2, img, div, article');
+  const allElements = document.querySelectorAll('h1, h2, img, div, article, main');
   
   // Filtra <nav>
   const elementsToReveal = Array.from(allElements).filter(element => !element.closest('nav, footer'));
