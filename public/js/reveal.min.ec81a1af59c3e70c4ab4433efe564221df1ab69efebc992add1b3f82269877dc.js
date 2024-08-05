@@ -1,0 +1,1 @@
+const allElements=document.querySelectorAll("h1, h2, img, div, article, main"),elementsToReveal=Array.from(allElements).filter(e=>!e.closest("nav, footer"));ScrollReveal().reveal(elementsToReveal,{opacity:0,duration:1e3,easing:"ease-in-out",reset:!1})

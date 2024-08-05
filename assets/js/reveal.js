@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+
   const allElements = document.querySelectorAll('h1, h2, img, div, article, main');
   
   // Filtra <nav>
@@ -10,4 +10,3 @@ document.addEventListener('DOMContentLoaded', () => {
       easing: 'ease-in-out',
       reset: false 
   });
-});
