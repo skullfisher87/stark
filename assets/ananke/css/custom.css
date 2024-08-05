@@ -3,7 +3,7 @@ body {
   overflow-y: scroll; 
 }
 
-.Roboto {
+.Roboto, html {
   font-family: Roboto !important;
 }
 
