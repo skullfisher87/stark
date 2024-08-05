@@ -58,10 +58,10 @@
     
   </head>
 
-  <body class="ma0 {{ $.Param "body_classes"  | default "bg-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }} fl w-100">
+  <body class="ma0 w-100 {{ $.Param "body_classes"  | default "bg-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }} fl w-100">
 
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
-    <main role="main" class="ma0  {{ $.Param "background_color"  | default "bg-white"}}  fl w-100">
+    <main role="main" class="ma0 dn {{ $.Param "background_color"  | default "bg-white"}}  fl w-100">
       
       <div class="pv3 ph3 w-80-l center {{ .Params.text_align | default "tc" }} {{ .Params.head_title | default "" }}">
         <h1 class="f1-l fw6-l {{ .Params.text_color | default "white" }} mb0 mt4 ttu slh-title  mw8 center ph3-l">

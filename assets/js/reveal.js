@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const allElements = document.querySelectorAll('h1, h2, img, div, main, article, section');
 
   // Filtra <nav> y <footer>
-  const elementsToReveal = Array.from(allElements).filter(element => !element.closest('nav'));
+  const elementsToReveal = Array.from(allElements).filter(element => !element.closest('nav,footer'));
 
   // Configuración de ScrollReveal
   ScrollReveal().reveal(elementsToReveal, {
