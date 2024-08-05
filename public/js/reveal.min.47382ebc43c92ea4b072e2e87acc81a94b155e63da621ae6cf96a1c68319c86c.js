@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelectorAll("h1, h2, img, div, main , article, section"),t=Array.from(e).filter(e=>!e.closest("nav, footer"));ScrollReveal().reveal(t,{opacity:0,duration:1e3,easing:"ease-in-out",reset:!1}),setTimeout(()=>{console.log("Trying to remove dn class"),mainElement&&mainElement.classList.remove("dn")},500)})

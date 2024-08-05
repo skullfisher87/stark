@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const n=document.querySelectorAll("h1, h2, img, div, article"),e=document.querySelectorAll("main"),t=document.querySelector("footer");e&&e.classList.add("dn"),t&&t.classList.remove("dn");const s=Array.from(n).filter(e=>!e.closest("nav, footer"));ScrollReveal().reveal(s,{opacity:0,duration:1e3,easing:"ease-in-out",reset:!1})})

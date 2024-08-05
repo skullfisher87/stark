@@ -2,6 +2,10 @@
   font-family: Roboto !important;
 }
 
+.dn {
+  display: none !important;
+}
+
 .ul-c {
   font-size: larger;
   list-style-type: square;
