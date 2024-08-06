@@ -1,10 +1,12 @@
 body {
-
   overflow-y: scroll; 
 }
 
-.Roboto, html {
+html {
   font-family: 'Roboto' !important;
+}
+.Roboto {
+  font-family: 'Roboto'  !important;
 }
 
 .dn {
