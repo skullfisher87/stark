@@ -7,7 +7,7 @@
     <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&900" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&900" async rel="stylesheet">   
     {{ hugo.Generator }}
     {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
     {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
@@ -28,7 +28,7 @@
     {{ end }}
 
     {{ partial "site-style.html" . }}
-    {{ partial "site-scripts.html" . }}
+   
 
     {{ block "favicon" . }}
       {{ partialCached "site-favicon.html" . }}
@@ -82,5 +82,6 @@
     {{ $revealJS := resources.Get "js/reveal.js" | minify | fingerprint }}
     <script src="{{ $revealJS.RelPermalink }}"></script>
   </body>
+  {{ partial "site-scripts.html" . }}
 </html>
 
