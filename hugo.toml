@@ -41,14 +41,14 @@ enableRobotsTXT = true
  
 [[params.ananke_socials]]
   name = "linkedin"
-    url = "#"
-[[params.ananke_socials]]
-  name = "facebook"
-    url = "#"
-[[params.ananke_socials]]
-  name = "instagram"
-    url = "#"
-[[params.ananke_socials]]
-  name = "youtube"
-    url = "#"
+    url = "https://www.linkedin.com/company/stark-tecnolog-a-sa/"
+#[[params.ananke_socials]]
+  #name = "facebook"
+    #url = "#"
+#[[params.ananke_socials]]
+  #name = "instagram"
+    #url = "#"
+#[[params.ananke_socials]]
+  #name = "youtube"
+    #url = "#"
 

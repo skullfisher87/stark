@@ -1,17 +1,17 @@
 <footer class="fl dn {{ .Site.Params.background_footer_color_class | default "bg-black" }} bottom-0 w-100 pt5-l ph5-l ph3 pt4 pb1 ph4-l" role="contentinfo">
-  <div class="flex justify-between flex-row-l flex-column">
+  <div class="flex justify-between flex-row-l flex-column mb4">
   
     <div class="mb4 mb0-l">
       <a href="{{ .Site.Home.RelPermalink }}" class="f3-l fw2 hover-black no-underline black-70 dib">
       {{ with .Site.Params.site_footer_logo }}
-        <img src="{{ relURL . }}" class="w100 mw5-l mw4" alt="{{ $.Site.Title }}" />
+        <img src="{{ relURL . }}" class="w-90-l mw4-m" alt="{{ $.Site.Title }}" />
       {{ else }}
         {{ .Site.Title }}
       {{ end }}
       </a>
     </div>
     
-    <div class="white f4-l">
+    <div class="white f4-l w-30-l pb4-m">
        <a class="white no-underline" href="https://www.google.com.py/maps/place/Bruselas+%26+Gumersindo+Sosa,+001410+Asunci%C3%B3n,+Paraguay/@-25.2889622,-57.564594,17z/data=!3m1!4b1!4m6!3m5!1s0x945da8af03ea857f:0xcbee6f7285838a93!8m2!3d-25.2889671!4d-57.5620191!16s%2Fg%2F11hb7gg001?hl=es&entry=ttu" target="_blank">
        <p class="mv2">Bruselas 2480 casi Gumersindo Sosa</p>
        <p class="mv2">Asunción – Paraguay</p>

@@ -12,12 +12,10 @@ background_services= "../imagenes/compu.png"
 +++
 
 {{< home 
-    h1_text="Commitment and dedication to serving your business"
-
+    h1_text="Commitment&nbsp;and&nbsp; dedication to serving your business"
     contact_url="contact"
-    
     section_heading="Our Experience"
-    section_text="With a highly qualified and trained team, we have gained the trust of major companies and public organizations, not only in Paraguay but in several South American countries." 
+    section_text="With a highly qualified and trained team,<br>we have gained the trust of major<br> companies and public organizations, not only in<br> Paraguay but in several South American countries." 
     
     section_heading_2="IBM Security" 
     section_text_2="IBM SECURITY GUARDIUM is an original system created for the critical mission of protecting your information from any risk. It discovers vulnerabilities and protects your confidential data in real-time across your entire business geography, from on-premises to the cloud."

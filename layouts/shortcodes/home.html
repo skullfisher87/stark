@@ -1,10 +1,10 @@
 {{ if .Inner }}
-  <article class="pl5-l pl3 w-100 center fl vh-87-l flex items-stretch">
+  <article class="pl6-l pl3 w-100 center fl vh-87-l flex items-stretch">
   
-    <section class="w-100 flex items-center">
+    <section class="w-60-m w-50-l flex items-center">
       
       <div class="">
-      <h1 class="f1-stark-l tl mb3">{{ .Get "h1_text" }}</h1> 
+      <h1 class="f1-stark-xl f1-stark-l tl mb3">{{ .Get "h1_text" | safeHTML }}</h1>
         <div class="w-100 tl f3-l color-grey">{{ .Inner | markdownify }}</div>
          <div class="mt5-l mb0-l mt4 mb5-l mb4 fl">
          <a class="button-xl no-underline color-grey red-button br5 pa2 ph3 hover-white-50" href="{{ .Site.BaseURL }}{{ .Get "contact_url" }}" title="{{ i18n "contactTitle" }}">
@@ -25,21 +25,22 @@
   
   </article>
   
+  
   <!-- sub -->
-    <article class="flex items-center ph4-l ph3 pv5-l pv4 w-100 center vh-87-l fl red-stark">
-    <section class="">
+    <article class="flex items-center ph6-l ph3 pv6-l pv4 w-100 center fl red-stark">
+    <section class="w-100">
       
       <div class="flex-l justify-between reverse">
-      <div class=" pl4-l pt4-l">
+      <div class="w-50-l w-100-m pl4-l">
       <h2 class="f1-stark-l tl white mt0 mb3">{{ .Get "section_heading" }}</h2> 
-        <div class="tl f3-l white pr5-l">{{ .Get "section_text" }}</div>
+        <div class="tl f3-l white ">{{ .Get "section_text" | safeHTML }}</div>
          <div class="mt5-l mb0-l mt4 mb4 fl">
          <a class="button-xl hover-black-50 no-underline black bg-white br5 pa2 ph3" href="{{ .Site.BaseURL }}{{ .Get "contact_url" }}" title="{{ i18n "contactTitle" }}">
                {{ i18n "ViewMore" }}
          </a>
       </div>
       </div>
-        <div class="fl br-3-c ph4-l w-100">
+        <div class="fl br-3-c pr4-l w-50-l w-100-m">
          
             <img class="w-100" src="{{ .Page.Params.img2 }}"> 
           
@@ -95,7 +96,7 @@
     </section>
     
     
-    <section class="w-100 pv5-l pv3 fl ph5-l ph3" style="background-image: url('{{ .Page.Params.background_services}}');
+    <section class="w-100 pv5-l pv3 fl ph6-l ph3" style="background-image: url('{{ .Page.Params.background_services}}');
     background-repeat: no-repeat;
     background-size: cover;">
       
