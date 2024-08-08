@@ -238,64 +238,7 @@ Paraguay sino en varios países de Sudamérica. Ver más IBM Security IBM SECURI
   </div>
 </nav>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var menuToggle = document.getElementById('menu-toggle');
-    var mobileMenu = document.getElementById('mobile-menu');
-  
-    menuToggle.addEventListener('click', function() {
-      mobileMenu.classList.toggle('dn'); 
-    });
-  
-    function adjustNavClass() {
-      var nav = document.querySelector('header');
-      if (window.innerWidth <= 1024) { 
-        nav.classList.add('sticky', 'w-100', 'z-1');
-        mobileMenu.classList.add('dn'); 
-        document.querySelectorAll('#mobile-menu li').forEach(function(menuItem) {
-          var hasChildren = menuItem.querySelector('ul');
-          if (hasChildren) {
-            hasChildren.classList.add('dn'); 
-          }
-        });
-      } else {
-        nav.classList.remove('sticky', 'w-100', 'z-1');
-        mobileMenu.classList.add('dn'); 
-        document.querySelectorAll('nav li.relative').forEach(function(menuItem) {
-          var hasChildren = menuItem.querySelector('ul');
-          if (hasChildren) {
-            hasChildren.classList.add('dn'); 
-          }
-        });
-      }
-    }
-  
-    adjustNavClass();
-    window.addEventListener('resize', adjustNavClass);
-  
-    
-    document.querySelectorAll('#mobile-menu li').forEach(function(menuItem) {
-      var hasChildren = menuItem.querySelector('ul');
-      if (hasChildren) {
-        menuItem.addEventListener('click', function(event) {
-          event.stopPropagation();
-          hasChildren.classList.toggle('dn'); 
-        });
-      }
-    });
-  
-    
-    document.querySelectorAll('nav li.relative').forEach(function(menuItem) {
-      var hasChildren = menuItem.querySelector('ul');
-      if (hasChildren) {
-        menuItem.addEventListener('click', function(event) {
-          event.stopPropagation();
-          hasChildren.classList.toggle('dn'); 
-        });
-      }
-    });
-  });
-</script>
+
 
       
  
@@ -668,7 +611,7 @@ Paraguay sino en varios países de Sudamérica. Ver más IBM Security IBM SECURI
 </footer>
 
     
-    <script src="/js/reveal.min.ecc07944762f92dd4dcd987aa894a714ae857175d8b65ab831f3430a65897210.js"></script>
+    <script src="/js/reveal.min.2762afb83d64fd394a4f1a5036f50c01fa9721b10f73a4ceadb1ba65509fb8d1.js"></script>
   </body>
   
 <script src="https://unpkg.com/scrollreveal" defer></script>
