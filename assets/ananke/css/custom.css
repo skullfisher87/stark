@@ -216,6 +216,11 @@ textarea::placeholder {
    .f1-stark-l {
         font-size: 4rem;
     }
+
+    .f3-l {
+      font-size: 1.3rem !important;
+    }
+
     .w-45-l {
         width: 45%;
     }
