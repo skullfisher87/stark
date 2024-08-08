@@ -238,64 +238,7 @@ Paraguay but in several South American countries. Know more IBM Security IBM SEC
   </div>
 </nav>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var menuToggle = document.getElementById('menu-toggle');
-    var mobileMenu = document.getElementById('mobile-menu');
-  
-    menuToggle.addEventListener('click', function() {
-      mobileMenu.classList.toggle('dn'); 
-    });
-  
-    function adjustNavClass() {
-      var nav = document.querySelector('header');
-      if (window.innerWidth <= 1024) { 
-        nav.classList.add('sticky', 'w-100', 'z-1');
-        mobileMenu.classList.add('dn'); 
-        document.querySelectorAll('#mobile-menu li').forEach(function(menuItem) {
-          var hasChildren = menuItem.querySelector('ul');
-          if (hasChildren) {
-            hasChildren.classList.add('dn'); 
-          }
-        });
-      } else {
-        nav.classList.remove('sticky', 'w-100', 'z-1');
-        mobileMenu.classList.add('dn'); 
-        document.querySelectorAll('nav li.relative').forEach(function(menuItem) {
-          var hasChildren = menuItem.querySelector('ul');
-          if (hasChildren) {
-            hasChildren.classList.add('dn'); 
-          }
-        });
-      }
-    }
-  
-    adjustNavClass();
-    window.addEventListener('resize', adjustNavClass);
-  
-    
-    document.querySelectorAll('#mobile-menu li').forEach(function(menuItem) {
-      var hasChildren = menuItem.querySelector('ul');
-      if (hasChildren) {
-        menuItem.addEventListener('click', function(event) {
-          event.stopPropagation();
-          hasChildren.classList.toggle('dn'); 
-        });
-      }
-    });
-  
-    
-    document.querySelectorAll('nav li.relative').forEach(function(menuItem) {
-      var hasChildren = menuItem.querySelector('ul');
-      if (hasChildren) {
-        menuItem.addEventListener('click', function(event) {
-          event.stopPropagation();
-          hasChildren.classList.toggle('dn'); 
-        });
-      }
-    });
-  });
-</script>
+
 
       
  
@@ -316,11 +259,11 @@ Paraguay but in several South American countries. Know more IBM Security IBM SEC
    
   <article class="pl6-l pl3 w-100 center fl vh-87-l flex items-stretch">
   
-    <section class="w-60-m w-50-l flex items-center">
+    <section class="w-20 w-50-l pv4 flex items-center">
       
-      <div class="">
-      <h1 class="f1-stark-xl f1-stark-l tl mb3">Commitment&nbsp;and&nbsp; dedication to serving your business</h1>
-        <div class="w-100 tl f3-l color-grey">Experience in solutions</div>
+      <div class="z-1">
+      <h1 class="f1-stark-xl f1-stark-l f3 tl mb3">Commitment&nbsp;and&nbsp; dedication to serving your business</h1>
+        <div class="w-100 tl f3-l color-grey nowrap">Experience in solutions</div>
          <div class="mt5-l mb0-l mt4 mb5-l mb4 fl">
          <a class="button-xl no-underline color-grey red-button br5 pa2 ph3 hover-white-50" href="http://localhost:1313/contact" title="">
                Reach Us
@@ -332,7 +275,7 @@ Paraguay but in several South American countries. Know more IBM Security IBM SEC
       
     </section> 
     
-      <section class="w-100 w-100-l flex">
+      <section class="w-100-l flex o-50 o-100-l">
           <div class="flex w-100">
             <img class="w-100" src="../imagenes/home.png"> 
           </div>
@@ -554,7 +497,7 @@ Paraguay but in several South American countries. Know more IBM Security IBM SEC
     <div class="mb4 mb0-l">
       <a href="/en/" class="f3-l fw2 hover-black no-underline black-70 dib">
       
-        <img src="/STARK-blanco.png" class="w-90-l mw4-m" alt="Stark Tecnology" />
+        <img src="/STARK-blanco.png" class="mw12-l  mw4" alt="Stark Tecnology" />
       
       </a>
     </div>
@@ -606,7 +549,7 @@ Paraguay but in several South American countries. Know more IBM Security IBM SEC
 </footer>
 
     
-    <script src="/js/reveal.min.ecc07944762f92dd4dcd987aa894a714ae857175d8b65ab831f3430a65897210.js"></script>
+    <script src="/js/reveal.min.2762afb83d64fd394a4f1a5036f50c01fa9721b10f73a4ceadb1ba65509fb8d1.js"></script>
   </body>
   
 <script src="https://unpkg.com/scrollreveal" defer></script>

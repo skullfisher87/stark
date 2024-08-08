@@ -148,6 +148,10 @@ background: linear-gradient(90deg, #d42e2fa3, #ffc5c59e);
   color:white;
 }
 
+.z-1 {
+  z-index: 1 !important;
+}
+
 .grey-button {
   background-color: #706F6F;
   color:white;

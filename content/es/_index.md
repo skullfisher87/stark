@@ -16,7 +16,7 @@ background_services= "./imagenes/compu.png"
     h1_text="Compromiso&nbsp;y&nbsp; dedicación al servicio de su negocio"
     contact_url="contacto"
     section_heading="Nuestra Experiencia"
-    section_text="Con un equipo altamente calificado y capacitado,<br> hemos ganado la confianza de importantes<br> empresas y organismos públicos, no solo en<br> Paraguay sino en varios países de Sudamérica." 
+    section_text="Con un equipo altamente calificado y capacitado, hemos ganado la confianza de importantes empresas y organismos públicos, no solo en Paraguay sino en varios países de Sudamérica." 
     
     section_heading_2="IBM Security" 
     section_text_2="IBM SECURITY GUARDIUM es un sistema original creado para la misión crítica de cuidar su información ante cualquier riesgo. Porque descubre vulnerabilidades y protege sus datos confidenciales, en tiempo real y en toda su geografía empresarial, desde las instalaciones a la nube."

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Configuración de ScrollReveal
   ScrollReveal().reveal(elementsToReveal, {
-      opacity: 0,
+      opacity: 0.5,
       duration: 1000,
       easing: 'ease-in-out',
       reset: false
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function adjustNavClass() {
       var nav = document.querySelector('header');
       if (window.innerWidth <= 1024) { 
-        nav.classList.add('sticky', 'w-100', 'z-1');
+        nav.classList.add('sticky', 'w-100', 'z-2');
         mobileMenu.classList.add('dn'); // Asegurarse de que el menú hamburguesa esté colapsado
         document.querySelectorAll('#mobile-menu li').forEach(function(menuItem) {
           var hasChildren = menuItem.querySelector('ul');
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       } else {
-        nav.classList.remove('sticky', 'w-100', 'z-1');
+        nav.classList.remove('sticky', 'w-100', 'z-2');
         mobileMenu.classList.add('dn'); // Asegurarse de que el menú hamburguesa esté colapsado
         document.querySelectorAll('nav li.relative').forEach(function(menuItem) {
           var hasChildren = menuItem.querySelector('ul');

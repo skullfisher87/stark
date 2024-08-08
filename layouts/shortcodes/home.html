@@ -1,11 +1,11 @@
 {{ if .Inner }}
   <article class="pl6-l pl3 w-100 center fl vh-87-l flex items-stretch">
   
-    <section class="w-60-m w-50-l flex items-center">
+    <section class="w-30 w-50-l pv2 flex items-center">
       
-      <div class="">
-      <h1 class="f1-stark-xl f1-stark-l tl mb3">{{ .Get "h1_text" | safeHTML }}</h1>
-        <div class="w-100 tl f3-l color-grey">{{ .Inner | markdownify }}</div>
+      <div class="z-1">
+      <h1 class="f1-stark-xl f1-stark-l f3 tl mb3">{{ .Get "h1_text" | safeHTML }}</h1>
+        <div class="w-100 tl f3-l color-grey nowrap">{{ .Inner | markdownify }}</div>
          <div class="mt5-l mb0-l mt4 mb5-l mb4 fl">
          <a class="button-xl no-underline color-grey red-button br5 pa2 ph3 hover-white-50" href="{{ .Site.BaseURL }}{{ .Get "contact_url" }}" title="{{ i18n "contactTitle" }}">
                {{ i18n "conocenos" }}
@@ -17,8 +17,8 @@
       
     </section> 
     
-      <section class="w-100 w-100-l flex">
-          <div class="flex w-100">
+      <section class="w-100-l flex o-50 o-100-l z-0">
+          <div class="flex w-100 ">
             <img class="w-100" src="{{ .Page.Params.img1 }}"> 
           </div>
       </section>
