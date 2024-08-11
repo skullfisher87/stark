@@ -232,64 +232,7 @@ LEARN ABOUT OUR SUCCESS STORIES Reach Us ">
   </div>
 </nav>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var menuToggle = document.getElementById('menu-toggle');
-    var mobileMenu = document.getElementById('mobile-menu');
-  
-    menuToggle.addEventListener('click', function() {
-      mobileMenu.classList.toggle('dn'); 
-    });
-  
-    function adjustNavClass() {
-      var nav = document.querySelector('header');
-      if (window.innerWidth <= 1024) { 
-        nav.classList.add('sticky', 'w-100', 'z-1');
-        mobileMenu.classList.add('dn'); 
-        document.querySelectorAll('#mobile-menu li').forEach(function(menuItem) {
-          var hasChildren = menuItem.querySelector('ul');
-          if (hasChildren) {
-            hasChildren.classList.add('dn'); 
-          }
-        });
-      } else {
-        nav.classList.remove('sticky', 'w-100', 'z-1');
-        mobileMenu.classList.add('dn'); 
-        document.querySelectorAll('nav li.relative').forEach(function(menuItem) {
-          var hasChildren = menuItem.querySelector('ul');
-          if (hasChildren) {
-            hasChildren.classList.add('dn'); 
-          }
-        });
-      }
-    }
-  
-    adjustNavClass();
-    window.addEventListener('resize', adjustNavClass);
-  
-    
-    document.querySelectorAll('#mobile-menu li').forEach(function(menuItem) {
-      var hasChildren = menuItem.querySelector('ul');
-      if (hasChildren) {
-        menuItem.addEventListener('click', function(event) {
-          event.stopPropagation();
-          hasChildren.classList.toggle('dn'); 
-        });
-      }
-    });
-  
-    
-    document.querySelectorAll('nav li.relative').forEach(function(menuItem) {
-      var hasChildren = menuItem.querySelector('ul');
-      if (hasChildren) {
-        menuItem.addEventListener('click', function(event) {
-          event.stopPropagation();
-          hasChildren.classList.toggle('dn'); 
-        });
-      }
-    });
-  });
-</script>
+
 
       
  
@@ -351,7 +294,7 @@ LEARN ABOUT OUR SUCCESS STORIES Reach Us ">
     <div class="mb4 mb0-l">
       <a href="/en/" class="f3-l fw2 hover-black no-underline black-70 dib">
       
-        <img src="/STARK-blanco.png" class="w-90-l mw4-m" alt="Stark Tecnology" />
+        <img src="/STARK-blanco.png" class="mw12-l  mw4" alt="Stark Tecnology" />
       
       </a>
     </div>
@@ -403,7 +346,7 @@ LEARN ABOUT OUR SUCCESS STORIES Reach Us ">
 </footer>
 
     
-    <script src="/js/reveal.min.ecc07944762f92dd4dcd987aa894a714ae857175d8b65ab831f3430a65897210.js"></script>
+    <script src="/js/reveal.min.92188fb3b282a65cc5c8e3e1cceae2526a1644f58f5bbab3ef849ec9eb4c4567.js"></script>
   </body>
   
 <script src="https://unpkg.com/scrollreveal" defer></script>

@@ -289,6 +289,9 @@ textarea::placeholder {
     .dn-m {
       display: none;
     }
+    .o-50-m  {
+      opacity: .5 !important;
+    }
 }
 
 @media screen  and (max-width: 29em) {
